@@ -1,0 +1,9 @@
+Data/
+IMGs/
+streamlitRAG/
+st_main.py
+tk_main.py
+chroma_clip_mm/
+ClaudeTemplate.txt
+.env
+lucky_win/
