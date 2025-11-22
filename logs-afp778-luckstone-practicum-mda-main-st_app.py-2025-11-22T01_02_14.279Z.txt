@@ -1,0 +1,1306 @@
+
+[     UTC     ] Logs for luckstone-chat.streamlit.app/
+────────────────────────────────────────────────────────────────────────────────────────
+[00:58:57] 🖥 Provisioning machine...
+[00:58:57] 🎛 Preparing system...
+[00:58:57] ⛓ Spinning up manager process...
+[00:58:58] 🚀 Starting up repository: 'luckstone-practicum-mda', branch: 'main', main module: 'st_app.py'
+[00:58:58] 🐙 Cloning repository...
+[00:59:00] 🐙 Cloning into '/mount/src/luckstone-practicum-mda'...
+
+[00:59:00] 🐙 Cloned repository!
+[00:59:00] 🐙 Pulling code changes from Github...
+[00:59:01] 📦 Processing dependencies...
+
+──────────────────────────────────────── uv ───────────────────────────────────────────
+
+Using uv pip install.
+Using Python 3.11.14 environment at /home/adminuser/venv
+Resolved 247 packages in 3.08s
+  × Failed to download and build `pywinpty==3.0.0`
+  ╰─▶ Build backend failed to build wheel through `build_wheel` (exit status:
+      1)
+
+      [stdout]
+      Running `maturin pep517 build-wheel -i
+      /home/adminuser/.cache/uv/builds-v0/.tmplG15lQ/bin/python
+      --compatibility off`
+      Rust not found, installing into a temporary directory
+      cargo 1.91.1 (ea2d97820 2025-10-10)
+
+      [stderr]
+      Python reports SOABI: cpython-311-x86_64-linux-gnu
+      Computed rustc target triple: x86_64-unknown-linux-gnu
+      Installation directory: /home/adminuser/.cache/puccinialin
+      Downloading rustup-init from
+      https://static.rust-lang.org/rustup/dist/x86_64-unknown-linux-gnu/rustup-init
+      Downloading rustup-init:   0%|          | 0.00/20.9M [00:00<?,
+      ?B/s]Downloading rustup-init:  38%|███▊      | 8.03M/20.9M [00:00<00:00,
+      58.3MB/s]Downloading rustup-init:  82%|████████▏ | 17.2M/20.9M
+      [00:00<00:00, 71.9MB/s]Downloading rustup-init: 100%|██████████|
+      20.9M/20.9M [00:00<00:00, 76.7MB/s]
+      Installing rust to /home/adminuser/.cache/puccinialin/rustup
+      info: profile set to 'minimal'
+      info: default host triple is x86_64-unknown-linux-gnu
+      info: syncing channel updates for 'stable-x86_64-unknown-linux-gnu'
+      info: latest update on 2025-11-10, rust version 1.91.1 (ed61e7d7e
+      2025-11-07)
+      info: downloading component 'cargo'
+      info: downloading component 'rust-std'
+      info: downloading component 'rustc'
+      info: installing component 'cargo'
+      info: installing component 'rust-std'
+      info: installing component 'rustc'
+      info: default toolchain set to 'stable-x86_64-unknown-linux-gnu'
+      Checking if cargo is installed
+          Updating crates.io index
+       Downloading crates ...
+        Downloaded env_home v0.1.0
+        Downloaded enum-primitive-derive v0.3.0
+        Downloaded crossbeam-utils v0.8.21
+        Downloaded unindent v0.2.4
+        Downloaded heck v0.5.0
+        Downloaded crossbeam-channel v0.5.15
+        Downloaded windows-threading v0.1.0
+        Downloaded windows-link v0.1.3
+        Downloaded unicode-ident v1.0.18
+        Downloaded windows-numerics v0.2.0
+        Downloaded windows-strings v0.4.2
+        Downloaded[2025-11-22 00:59:34.789711]  pyo3-macros-backend v0.25.1
+        Downloaded serde_derive v1.0.219
+        Downloaded serde_json v1.0.142
+        Downloaded portable-atomic v1.11.1
+        Downloaded serde v1.0.219
+        Downloaded pyo3-ffi v0.25.1
+        Downloaded memchr v2.7.5
+        Downloaded proc-macro2 v1.0.95
+        Downloaded windows-core v0.61.2
+        Downloaded windows-collections v0.2.0
+        Downloaded target-lexicon v0.13.2
+        Downloaded pyo3-build-config v0.25.1
+        Downloaded windows-implement v0.60.0
+        Downloaded num-traits v0.2.19
+        Downloaded rustix v1.0.8
+        Downloaded once_cell v1.21.3
+        Downloaded syn v2.0.104
+        Downloaded windows-future v0.2.1
+        Downloaded quote v1.0.40
+        Downloaded pyo3-macros v0.25.1
+        Downloaded memoffset v0.9.1
+        Downloaded itoa v1.0.15
+        Downloaded indoc v2.0.6
+        Downloaded windows-targets v0.53.3
+        Downloaded windows-result v0.3.4
+        Downloaded winsafe v0.0.19
+        Downloaded windows-interface v0.59.1
+        Downloaded which v8.0.0
+        Downloaded ryu v1.0.20
+        Downloaded bitflags v2.9.1
+        Downloaded glob v0.3.2
+        Downloaded errno v0.3.13
+        Downloaded autocfg v1.5.0
+        Downloaded windows_aarch64_msvc v0.53.0
+        Downloaded windows_x86_64_gnullvm v0.53.0
+        Downloaded windows_aarch64_gnullvm v0.53.0
+        Downloaded windows_x86_64_msvc v0.53.0
+        Downloaded windows_i686_msvc v0.53.0
+        Downloaded windows_i686_gnullvm v0.53.0
+        Downloaded libc v0.2.175
+        Downloaded windows_x86_64_gnu v0.53.0
+        Downloaded windows_i686_gnu v0.53.0
+        Downloaded pyo3 v0.25.1
+        Downloaded linux-raw-sys v0.9.4
+        Downloaded windows-sys v0.60.2
+        Downloaded winpty-rs v1.0.3
+        Downloaded windows-bindgen v0.62.1
+        Downloaded windows v0.61.3
+      📦 Including license file `LICENSE.txt`
+      🍹 Building a mixed python/rust project
+      🔗 Found pyo3 bindings
+      🐍 Found CPython 3.11 at
+      /home/adminuser/.cache/uv/builds-v0/.tmplG15lQ/bin/python
+         Compiling proc-macro2 v1.0.95
+         Compiling unicode-ident v1.0.18
+         Compiling target-lexicon v0.13.2
+         Compiling windows-link v0.1.3
+         Compiling autocfg v1.5.0
+         Compiling once_cell v1.21.3
+         Compiling serde v1.0.219
+         Compiling serde_json v1.0.142
+         Compiling rustix v1.0.8
+         Compiling memchr v2.7.5
+         Compiling ryu v1.0.20
+      [2025-11-22 00:59:34.789963]    Compiling bitflags v2.9.1
+         Compiling linux-raw-sys v0.9.4
+         Compiling itoa v1.0.15
+         Compiling glob v0.3.2
+         Compiling windows-strings v0.4.2
+         Compiling windows-result v0.3.4
+         Compiling windows-threading v0.1.0
+         Compiling env_home v0.1.0
+         Compiling crossbeam-utils v0.8.21
+         Compiling libc v0.2.175
+         Compiling heck v0.5.0
+         Compiling indoc v2.0.6
+         Compiling unindent v0.2.4
+         Compiling num-traits v0.2.19
+         Compiling memoffset v0.9.1
+         Compiling pywinpty v3.0.0
+      (/home/adminuser/.cache/uv/sdists-v6/pypi/pywinpty/3.0.0/_qYGKlCwwQ902QnwwLu4I/src)
+      error[E0425]: cannot find function `command_ok` in this scope
+        --> build.rs:27:27
+         |
+      27 |         let nuget_found = command_ok(nuget.arg("help"));
+         |                           ^^^^^^^^^^ not found in this scope
+         |
+      note: found an item that was configured out
+        --> build.rs:8:4
+         |
+       7 | #[cfg(windows)]
+         |       ------- [2025-11-22 00:59:34.790139] the item is gated here
+       8 | fn command_ok(cmd: &mut Command) -> bool {
+         |    ^^^^^^^^^^
+
+      error[E0425]: cannot find function `command_ok` in this scope
+        --> build.rs:33:12
+         |
+      33 |         if command_ok(
+         |            ^^^^^^^^^^ not found in this scope
+         |
+      note: found an item that was configured out
+        --> build.rs:8:4
+         |
+       7 | #[cfg(windows)]
+         |       ------- the item is gated here
+       8 | fn command_ok(cmd: &mut Command) -> bool {
+         |    ^^^^^^^^^^
+
+      For more information about this error, try `rustc --explain E0425`.
+      error: could not compile `pywinpty` (build script) due to 2 previous
+      errors
+      warning: build failed, waiting for other jobs to finish...
+      💥 maturin failed
+        Caused by: Failed to build a native library through cargo
+        Caused by: Cargo build finished with "exit status:
+      101": `env -u CARGO PYO3_BUILD_EXTENSION_MODULE="1"
+      PYO3_ENVIRONMENT_SIGNATURE="cpython-3.11-64bit"
+      PYO3_PYTHON="/home/adminuser/.cache/uv/builds-v0/.tmplG15lQ/bin/python"
+      PYTHON_SYS_EXECUTABLE="/home/adminuser/.cache/uv/builds-v0/.tmplG15lQ/bin/python"
+      "cargo" "rustc" "--profile" "release" "--message-format"
+      "json-render-diagnostics" "--manifest-path"
+      "/home/adminuser/.cache/uv/sdists-v6/pypi/pywinpty/3.0.0/_qYGKlCwwQ902QnwwLu4I/src/Cargo.toml"
+      "--lib"`
+      Error: command ['maturin', 'pep517', 'build-wheel', '-i',
+      '/home/adminuser/.cache/uv/builds-v0/.tmplG15lQ/bin/python',
+      '--compatibility', 'off'] returned non-zero exit status 1
+
+Checking if Streamlit is installed
+Installing rich for an improved exception logging
+Using uv pip install.
+Using Python 3.11.14 environment at /home/adminuser/venv
+Resolved 4 packages in 79ms
+Prepared 1 package in 50ms
+Installed 4 packages in 36ms
+ + markdown-it-py==4.0.0
+ + mdurl==0.1.2
+ + pygments==2.19.2[2025-11-22 00:59:35.049820] 
+ + rich==14.2.0
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+
+──────────────────────────────────────── pip ───────────────────────────────────────────
+
+Using standard pip install.
+Collecting acres==0.5.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 1))
+  Downloading acres-0.5.0-py3-none-any.whl.metadata (6.2 kB)
+Collecting aiohappyeyeballs==2.6.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 2))
+  Downloading aiohappyeyeballs-2.6.1-py3-none-any.whl.metadata (5.9 kB)
+Collecting aiohttp==3.12.15 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 3))
+  Downloading aiohttp-3.12.15-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.7 kB)
+Collecting aiosignal==1.4.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 4))
+  Downloading aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+Collecting altair==5.5.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 5))
+  Downloading altair-5.5.0-py3-none-any.whl.metadata (11 kB)
+Collecting annotated-types==0.7.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 6))
+  Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+Collecting anyio==4.11.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 7))
+  Downloading anyio-4.11.0-py3-none-any.whl.metadata (4.1 kB)
+Collecting argon2-cffi==25.1.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 8))
+  Downloading argon2_cffi-25.1.0-py3-none-any.whl.metadata (4.1 kB)
+Collecting argon2-cffi-bindings==25.1.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 9))
+  Downloading argon2_cffi_bindings-25.1.0-cp39-abi3-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (7.4 kB)
+Collecting arrow==1.3.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 10))
+  Downloading arrow-1.3.0-py3-none-any.whl.metadata (7.5 kB)
+Collecting asttokens==3.0.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 11))
+  Downloading asttokens-3.0.0-py3-none-any.whl.metadata (4.7 kB)
+Collecting async-lru==2.0.5 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 12))
+  Downloading async_lru-2.0.5-py3-none-any.whl.metadata (4.5 kB)
+Collecting attrs==25.3.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 13))
+  Downloading attrs-25.3.0-py3-none-any.whl.metadata (10 kB)
+Collecting babel==2.17.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 14))
+  Downloading babel-2.17.0-py3-none-any.whl.metadata (2.0 kB)
+Collecting backoff==2.2.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 15))
+  Downloading backoff-2.2.1-py3-none-any.whl.metadata (14 kB)
+Collecting bcrypt==4.3.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 16))
+  Downloading bcrypt-4.3.0-cp39-abi3-manylinux_2_34_x86_64.whl.metadata (10 kB)
+Collecting beautifulsoup4==4.13.5 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 17))
+  Downloading beautifulsoup4-4.13.5-py3-none-any.whl.metadata (3.8 kB)
+Collecting bleach==6.2.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 18))
+  Downloading bleach-6.2.0-py3-none-any.whl.metadata (30 kB)
+Collecting blinker==1.9.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 19))
+  Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+Collecting build==1.3.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 20))
+  Downloading build-1.3.0-py3-none-any.whl.metadata (5.6 kB)
+Collecting cachetools==5.5.2 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 21))
+  Downloading cachetools-5.5.2-py3-none-any.whl.metadata (5.4 kB)
+Collecting certifi==2025.8.3 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 22))
+  Downloading certifi-2025.8.3-py3-none-any.whl.metadata (2.4 kB)
+Collecting cffi==2.0.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 23))
+  Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+Collecting charset-normalizer==3.4.3 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 24))
+  Downloading charset_normalizer-3.4.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (36 kB)
+Collecting chromadb==1.1.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 25))
+  Downloading chromadb-1.1.0-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.2 kB)
+Collecting ci-info==0.3.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 26))
+  Downloading ci_info-0.3.0-py3-none-any.whl.metadata (6.1 kB)
+Collecting click==8.3.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 27))
+  Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+Collecting colorama==0.4.6 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 28))
+  Downloading colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+Collecting coloredlogs==15.0.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 29))
+  Downloading coloredlogs-15.0.1-py2.py3-none-any.whl.metadata (12 kB)
+Collecting comm==0.2.3 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 30))
+  Downloading comm-0.2.3-py3-none-any.whl.metadata (3.7 kB)
+Collecting configobj==5.0.9 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 31))
+  Downloading configobj-5.0.9-py2.py3-none-any.whl.metadata (3.2 kB)
+Collecting configparser==7.2.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 32))
+  Downloading configparser-7.2.0-py3-none-any.whl.metadata (5.5 kB)
+Collecting dataclasses-json==0.6.7 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 33))
+  Downloading dataclasses_json-0.6.7-py3-none-any.whl.metadata (25 kB)
+Collecting debugpy==1.8.17 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 34))
+  Downloading debugpy-1.8.17-cp311-cp311-manylinux_2_34_x86_64.whl.metadata (1.4 kB)
+Collecting decorator==5.2.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 35))
+  Downloading decorator-5.2.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting defusedxml==0.7.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 36))
+  Downloading defusedxml-0.7.1-py2.py3-none-any.whl.metadata (32 kB)
+Collecting distro==1.9.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 37))
+  Downloading distro-1.9.0-py3-none-any.whl.metadata (6.8 kB)
+Collecting durationpy==0.10 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 38))
+  Downloading durationpy-0.10-py3-none-any.whl.metadata (340 bytes)
+Collecting etelemetry==0.3.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 39))
+  Downloading etelemetry-0.3.1-py3-none-any.whl.metadata (3.2 kB)
+Collecting executing==2.2.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 40))
+  Downloading executing-2.2.1-py2.py3-none-any.whl.metadata (8.9 kB)
+Collecting fastjsonschema==2.21.2 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 41))
+  Downloading fastjsonschema-2.21.2-py3-none-any.whl.metadata (2.3 kB)
+Collecting filelock==3.19.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 42))
+  Downloading filelock-3.19.1-py3-none-any.whl.metadata (2.1 kB)
+Collecting flatbuffers==25.2.10 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 43))
+  Downloading flatbuffers-25.2.10-py2.py3-none-any.whl.metadata (875 bytes)
+Collecting fqdn==1.5.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 44))
+  Downloading fqdn-1.5.1-py3-none-any.whl.metadata (1.4 kB)
+Collecting frozenlist==1.7.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 45))
+  Downloading frozenlist-1.7.0-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (18 kB)
+Collecting fsspec==2025.9.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 46))
+  Downloading fsspec-2025.9.0-py3-none-any.whl.metadata (10 kB)
+Collecting ftfy==6.3.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 47))
+  Downloading ftfy-6.3.1-py3-none-any.whl.metadata (7.3 kB)
+Collecting gitdb==4.0.12 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 48))
+  Downloading gitdb-4.0.12-py3-none-any.whl.metadata (1.2 kB)
+Collecting GitPython==3.1.45 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 49))
+  Downloading gitpython-3.1.45-py3-none-any.whl.metadata (13 kB)
+Collecting google-auth==2.40.3 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 50))
+  Downloading google_auth-2.40.3-py2.py3-none-any.whl.metadata (6.2 kB)
+Collecting googleapis-common-protos==1.70.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 51))
+  Downloading googleapis_common_protos-1.70.0-py3-none-any.whl.metadata (9.3 kB)
+Collecting greenlet==3.2.4 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 52))
+  Downloading greenlet-3.2.4-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (4.1 kB)
+Collecting grpcio==1.75.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 53))
+  Downloading grpcio-1.75.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (3.7 kB)
+Collecting h11==0.16.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 54))
+  Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Collecting httpcore==1.0.9 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 55))
+  Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+Collecting httplib2==0.31.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 56))
+  Downloading httplib2-0.31.0-py3-none-any.whl.metadata (2.2 kB)
+Collecting httptools==0.6.4 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 57))
+  Downloading httptools-0.6.4-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.6 kB)
+Collecting httpx==0.28.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 58))
+  Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+Collecting httpx-sse==0.4.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 59))
+  Downloading httpx_sse-0.4.1-py3-none-any.whl.metadata (9.4 kB)
+Collecting huggingface-hub==0.35.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 60))
+  Downloading huggingface_hub-0.35.1-py3-none-any.whl.metadata (14 kB)
+Collecting humanfriendly==10.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 61))
+  Downloading humanfriendly-10.0-py2.py3-none-any.whl.metadata (9.2 kB)
+Collecting idna==3.10 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 62))
+  Downloading idna-3.10-py3-none-any.whl.metadata (10 kB)
+Collecting importlib_metadata==8.7.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 63))
+  Downloading importlib_metadata-8.7.0-py3-none-any.whl.metadata (4.8 kB)
+Collecting importlib_resources==6.5.2 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 64))
+  Downloading importlib_resources-6.5.2-py3-none-any.whl.metadata (3.9 kB)
+Collecting ipykernel==6.30.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 65))
+  Downloading ipykernel-6.30.1-py3-none-any.whl.metadata (6.2 kB)
+Collecting ipython==9.5.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 66))
+  Downloading ipython-9.5.0-py3-none-any.whl.metadata (4.4 kB)
+Collecting ipython_pygments_lexers==1.1.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 67))
+  Downloading ipython_pygments_lexers-1.1.1-py3-none-any.whl.metadata (1.1 kB)
+Collecting isoduration==20.11.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 68))
+  Downloading isoduration-20.11.0-py3-none-any.whl.metadata (5.7 kB)
+Collecting jedi==0.19.2 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 69))
+  Downloading jedi-0.19.2-py2.py3-none-any.whl.metadata (22 kB)
+Collecting Jinja2==3.1.6 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 70))
+  Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting jiter==0.11.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 71))
+  Downloading jiter-0.11.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.2 kB)
+Collecting json5==0.12.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 72))
+  Downloading json5-0.12.1-py3-none-any.whl.metadata (36 kB)
+Collecting jsonpatch==1.33 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 73))
+  Downloading jsonpatch-1.33-py2.py3-none-any.whl.metadata (3.0 kB)
+Collecting jsonpointer==3.0.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 74))
+  Downloading jsonpointer-3.0.0-py2.py3-none-any.whl.metadata (2.3 kB)
+Collecting jsonschema==4.25.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 75))
+  Downloading jsonschema-4.25.1-py3-none-any.whl.metadata (7.6 kB)
+Collecting jsonschema-specifications==2025.9.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 76))
+  Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+Collecting jupyter-events==0.12.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 77))
+  Downloading jupyter_events-0.12.0-py3-none-any.whl.metadata (5.8 kB)
+Collecting jupyter-lsp==2.3.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 78))
+  Downloading jupyter_lsp-2.3.0-py3-none-any.whl.metadata (1.8 kB)
+Collecting jupyter_client==8.6.3 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 79))
+  Downloading jupyter_client-8.6.3-py3-none-any.whl.metadata (8.3 kB)
+Collecting jupyter_core==5.8.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 80))
+  Downloading jupyter_core-5.8.1-py3-none-any.whl.metadata (1.6 kB)
+Collecting jupyter_server==2.17.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 81))
+  Downloading jupyter_server-2.17.0-py3-none-any.whl.metadata (8.5 kB)
+Collecting jupyter_server_terminals==0.5.3 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 82))
+  Downloading jupyter_server_terminals-0.5.3-py3-none-any.whl.metadata (5.6 kB)
+Collecting jupyterlab==4.4.7 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 83))
+  Downloading jupyterlab-4.4.7-py3-none-any.whl.metadata (16 kB)
+Collecting jupyterlab_pygments==0.3.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 84))
+  Downloading jupyterlab_pygments-0.3.0-py3-none-any.whl.metadata (4.4 kB)
+Collecting jupyterlab_server==2.27.3 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 85))
+  Downloading jupyterlab_server-2.27.3-py3-none-any.whl.metadata (5.9 kB)
+Collecting kubernetes==33.1.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 86))
+  Downloading kubernetes-33.1.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting langchain==0.3.27 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 87))
+  Downloading langchain-0.3.27-py3-none-any.whl.metadata (7.8 kB)
+Collecting langchain-chroma==0.2.6 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 88))
+  Downloading langchain_chroma-0.2.6-py3-none-any.whl.metadata (1.1 kB)
+Collecting langchain-community==0.3.29 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 89))
+  Downloading langchain_community-0.3.29-py3-none-any.whl.metadata (2.9 kB)
+Collecting langchain-core==0.3.76 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 90))
+  Downloading langchain_core-0.3.76-py3-none-any.whl.metadata (3.7 kB)
+Collecting langchain-experimental==0.3.4 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 91))
+  Downloading langchain_experimental-0.3.4-py3-none-any.whl.metadata (1.7 kB)
+Collecting langchain-openai==0.3.33 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 92))
+  Downloading langchain_openai-0.3.33-py3-none-any.whl.metadata (2.4 kB)
+Collecting langchain-text-splitters==0.3.11 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 93))
+  Downloading langchain_text_splitters-0.3.11-py3-none-any.whl.metadata (1.8 kB)
+Collecting langsmith==0.4.30 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 94))
+  Downloading langsmith-0.4.30-py3-none-any.whl.metadata (14 kB)
+Collecting lark==1.3.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 95))
+  Downloading lark-1.3.0-py3-none-any.whl.metadata (1.8 kB)
+Collecting looseversion==1.3.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 96))
+  Downloading looseversion-1.3.0-py2.py3-none-any.whl.metadata (4.6 kB)
+Collecting lxml==6.0.2 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 97))
+  Downloading lxml-6.0.2-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (3.6 kB)
+Collecting markdown-it-py==4.0.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 98))
+  Downloading markdown_it_py-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+Collecting MarkupSafe==3.0.2 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 99))
+  Downloading MarkupSafe-3.0.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.0 kB)
+Collecting marshmallow==3.26.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 100))
+  Downloading marshmallow-3.26.1-py3-none-any.whl.metadata (7.3 kB)
+Collecting matplotlib-inline==0.1.7 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 101))
+  Downloading matplotlib_inline-0.1.7-py3-none-any.whl.metadata (3.9 kB)
+Collecting mdurl==0.1.2 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 102))
+  Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Collecting mistune==3.1.4 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 103))
+  Downloading mistune-3.1.4-py3-none-any.whl.metadata (1.8 kB)
+Collecting mmh3==5.2.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 104))
+  Downloading mmh3-5.2.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (14 kB)
+Collecting mpmath==1.3.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 105))
+  Downloading mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+Collecting multidict==6.6.4 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 106))
+  Downloading multidict-6.6.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.3 kB)
+Collecting mypy_extensions==1.1.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 107))
+  Downloading mypy_extensions-1.1.0-py3-none-any.whl.metadata (1.1 kB)
+Collecting narwhals==2.10.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 108))
+  Downloading narwhals-2.10.0-py3-none-any.whl.metadata (11 kB)
+Collecting nbclient==0.10.2 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 109))
+  Downloading nbclient-0.10.2-py3-none-any.whl.metadata (8.3 kB)
+Collecting nbconvert==7.16.6 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 110))
+  Downloading nbconvert-7.16.6-py3-none-any.whl.metadata (8.5 kB)
+Collecting nbformat==5.10.4 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 111))
+  Downloading nbformat-5.10.4-py3-none-any.whl.metadata (3.6 kB)
+Collecting nest-asyncio==1.6.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 112))
+  Downloading nest_asyncio-1.6.0-py3-none-any.whl.metadata (2.8 kB)
+Collecting networkx==3.5 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 113))
+  Downloading networkx-3.5-py3-none-any.whl.metadata (6.3 kB)
+Collecting nibabel==5.3.2 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 114))
+  Downloading nibabel-5.3.2-py3-none-any.whl.metadata (9.1 kB)
+Collecting nipype==1.10.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 115))
+  Downloading nipype-1.10.0-py3-none-any.whl.metadata (7.1 kB)
+Collecting notebook==7.4.5 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 116))
+  Downloading notebook-7.4.5-py3-none-any.whl.metadata (10 kB)
+Collecting notebook_shim==0.2.4 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 117))
+  Downloading notebook_shim-0.2.4-py3-none-any.whl.metadata (4.0 kB)
+Collecting numpy==2.3.3 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 118))
+  Downloading numpy-2.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 179.2 MB/s eta 0:00:00[2025-11-22 00:59:45.895257] 
+Collecting oauthlib==3.3.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 119))
+  Downloading oauthlib-3.3.1-py3-none-any.whl.metadata (7.9 kB)
+Collecting onnxruntime==1.22.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 120))
+  Downloading onnxruntime-1.22.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (4.6 kB)
+Collecting open_clip_torch==3.2.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 121))
+  Downloading open_clip_torch-3.2.0-py3-none-any.whl.metadata (32 kB)
+Collecting openai==1.109.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 122))
+  Downloading openai-1.109.0-py3-none-any.whl.metadata (29 kB)
+Collecting opentelemetry-api==1.37.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 123))
+  Downloading opentelemetry_api-1.37.0-py3-none-any.whl.metadata (1.5 kB)
+Collecting opentelemetry-exporter-otlp-proto-common==1.37.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 124))
+  Downloading opentelemetry_exporter_otlp_proto_common-1.37.0-py3-none-any.whl.metadata (1.8 kB)
+Collecting opentelemetry-exporter-otlp-proto-grpc==1.37.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 125))
+  Downloading opentelemetry_exporter_otlp_proto_grpc-1.37.0-py3-none-any.whl.metadata (2.4 kB)
+Collecting opentelemetry-proto==1.37.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 126))
+  Downloading opentelemetry_proto-1.37.0-py3-none-any.whl.metadata (2.3 kB)
+Collecting opentelemetry-sdk==1.37.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 127))
+  Downloading opentelemetry_sdk-1.37.0-py3-none-any.whl.metadata (1.5 kB)
+Collecting opentelemetry-semantic-conventions==0.58b0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 128))
+  Downloading opentelemetry_semantic_conventions-0.58b0-py3-none-any.whl.metadata (2.4 kB)
+Collecting orjson==3.11.3 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 129))
+  Downloading orjson-3.11.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (41 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 41.9/41.9 kB 95.1 MB/s eta 0:00:00[2025-11-22 00:59:47.207337] 
+Collecting overrides==7.7.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 130))
+  Downloading overrides-7.7.0-py3-none-any.whl.metadata (5.8 kB)
+Collecting packaging==25.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 131))
+  Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting pandas==2.3.2 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 132))
+  Downloading pandas-2.3.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (91 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.2/91.2 kB 228.5 MB/s eta 0:00:00[2025-11-22 00:59:47.454992] 
+Collecting pandocfilters==1.5.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 133))
+  Downloading pandocfilters-1.5.1-py2.py3-none-any.whl.metadata (9.0 kB)
+Collecting parso==0.8.5 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 134))
+  Downloading parso-0.8.5-py2.py3-none-any.whl.metadata (8.3 kB)
+Collecting pathlib==1.0.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 135))
+  Downloading pathlib-1.0.1-py3-none-any.whl.metadata (5.1 kB)
+Collecting pillow==11.3.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 136))
+  Downloading pillow-11.3.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.0 kB)
+Collecting platformdirs==4.4.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 137))
+  Downloading platformdirs-4.4.0-py3-none-any.whl.metadata (12 kB)
+Collecting posthog==5.4.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 138))
+  Downloading posthog-5.4.0-py3-none-any.whl.metadata (5.7 kB)
+Collecting prometheus_client==0.23.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 139))
+  Downloading prometheus_client-0.23.1-py3-none-any.whl.metadata (1.9 kB)
+Collecting prompt_toolkit==3.0.52 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 140))
+  Downloading prompt_toolkit-3.0.52-py3-none-any.whl.metadata (6.4 kB)
+Collecting propcache==0.3.2 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 141))
+  Downloading propcache-0.3.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (12 kB)
+Collecting protobuf==6.32.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 142))
+  Downloading protobuf-6.32.1-cp39-abi3-manylinux2014_x86_64.whl.metadata (593 bytes)
+Collecting prov==2.1.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 143))
+  Downloading prov-2.1.1-py3-none-any.whl.metadata (3.7 kB)
+Collecting psutil==7.1.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 144))
+  Downloading psutil-7.1.0-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (23 kB)
+Collecting pure_eval==0.2.3 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 145))
+  Downloading pure_eval-0.2.3-py3-none-any.whl.metadata (6.3 kB)
+Collecting puremagic==1.30 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 146))
+  Downloading puremagic-1.30-py3-none-any.whl.metadata (5.8 kB)
+Collecting pyarrow==21.0.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 147))
+  Downloading pyarrow-21.0.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (3.3 kB)
+Collecting pyasn1==0.6.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 148))
+  Downloading pyasn1-0.6.1-py3-none-any.whl.metadata (8.4 kB)
+Collecting pyasn1_modules==0.4.2 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 149))
+  Downloading pyasn1_modules-0.4.2-py3-none-any.whl.metadata (3.5 kB)
+Collecting pybase64==1.4.2 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 150))
+  Downloading pybase64-1.4.2-cp311-cp311-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl.metadata (8.7 kB)
+Collecting pycparser==2.23 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 151))
+  Downloading pycparser-2.23-py3-none-any.whl.metadata (993 bytes)
+Collecting pydantic==2.11.9 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 152))
+  Downloading pydantic-2.11.9-py3-none-any.whl.metadata (68 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 68.4/68.4 kB 149.9 MB/s eta 0:00:00[2025-11-22 00:59:49.498249] 
+Collecting pydantic-settings==2.10.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 153))
+  Downloading pydantic_settings-2.10.1-py3-none-any.whl.metadata (3.4 kB)
+Collecting pydantic_core==2.33.2 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 154))
+  Downloading pydantic_core-2.33.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+Collecting pydeck==0.9.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 155))
+  Downloading pydeck-0.9.1-py2.py3-none-any.whl.metadata (4.1 kB)
+Collecting pydot==4.0.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 156))
+  Downloading pydot-4.0.1-py3-none-any.whl.metadata (11 kB)
+Collecting Pygments==2.19.2 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 157))
+  Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+Collecting PyMuPDF==1.26.4 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 158))
+  Downloading pymupdf-1.26.4-cp39-abi3-manylinux_2_28_x86_64.whl.metadata (3.4 kB)
+Collecting pyparsing==3.2.5 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 159))
+  Downloading pyparsing-3.2.5-py3-none-any.whl.metadata (5.0 kB)
+Collecting PyPika==0.48.9 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 160))
+  Downloading PyPika-0.48.9.tar.gz (67 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 67.3/67.3 kB 149.0 MB/s eta 0:00:00[2025-11-22 00:59:51.261624] 
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting pyproject_hooks==1.2.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 161))
+  Downloading pyproject_hooks-1.2.0-py3-none-any.whl.metadata (1.3 kB)
+Collecting pyreadline3==3.5.4 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 162))
+  Downloading pyreadline3-3.5.4-py3-none-any.whl.metadata (4.7 kB)
+Collecting python-dateutil==2.9.0.post0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 163))
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting python-dotenv==1.1.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 164))
+  Downloading python_dotenv-1.1.1-py3-none-any.whl.metadata (24 kB)
+Collecting python-json-logger==3.3.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 165))
+  Downloading python_json_logger-3.3.0-py3-none-any.whl.metadata (4.0 kB)
+Collecting pytz==2025.2 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 166))
+  Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+Collecting pywinpty==3.0.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 167))
+  Downloading pywinpty-3.0.0.tar.gz (28 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Installing backend dependencies: started
+  Installing backend dependencies: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting pyxnat==1.6.3 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 168))
+  Downloading pyxnat-1.6.3-py3-none-any.whl.metadata (5.4 kB)
+Collecting PyYAML==6.0.2 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 169))
+  Downloading PyYAML-6.0.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.1 kB)
+Collecting pyzmq==27.1.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 170))
+  Downloading pyzmq-27.1.0-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (6.0 kB)
+Collecting rdflib==7.2.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 171))
+  Downloading rdflib-7.2.1-py3-none-any.whl.metadata (11 kB)
+Collecting referencing==0.36.2 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 172))
+  Downloading referencing-0.36.2-py3-none-any.whl.metadata (2.8 kB)
+Collecting regex==2025.9.18 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 173))
+  Downloading regex-2025.9.18-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.5/40.5 kB 95.9 MB/s eta 0:00:00[2025-11-22 01:00:03.105733] 
+Collecting requests==2.32.5 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 174))
+  Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+Collecting requests-oauthlib==2.0.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 175))
+  Downloading requests_oauthlib-2.0.0-py2.py3-none-any.whl.metadata (11 kB)
+Collecting requests-toolbelt==1.0.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 176))
+  Downloading requests_toolbelt-1.0.0-py2.py3-none-any.whl.metadata (14 kB)
+Collecting rfc3339-validator==0.1.4 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 177))
+  Downloading rfc3339_validator-0.1.4-py2.py3-none-any.whl.metadata (1.5 kB)
+Collecting rfc3986-validator==0.1.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 178))
+  Downloading rfc3986_validator-0.1.1-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting rfc3987-syntax==1.1.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 179))
+  Downloading rfc3987_syntax-1.1.0-py3-none-any.whl.metadata (7.7 kB)
+Collecting rich==14.1.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 180))
+  Downloading rich-14.1.0-py3-none-any.whl.metadata (18 kB)
+Collecting rpds-py==0.27.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 181))
+  Downloading rpds_py-0.27.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.2 kB)
+Collecting rsa==4.9.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 182))
+  Downloading rsa-4.9.1-py3-none-any.whl.metadata (5.6 kB)
+Collecting safetensors==0.6.2 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 183))
+  Downloading safetensors-0.6.2-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+Collecting scipy==1.16.2 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 184))
+  Downloading scipy-1.16.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (62 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 115.5 MB/s eta 0:00:00[2025-11-22 01:00:05.057918] 
+Collecting Send2Trash==1.8.3 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 185))
+  Downloading Send2Trash-1.8.3-py3-none-any.whl.metadata (4.0 kB)
+Collecting shellingham==1.5.4 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 186))
+  Downloading shellingham-1.5.4-py2.py3-none-any.whl.metadata (3.5 kB)
+Collecting simplejson==3.20.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 187))
+  Downloading simplejson-3.20.1-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.2 kB)
+Collecting six==1.17.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 188))
+  Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting smmap==5.0.2 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 189))
+  Downloading smmap-5.0.2-py3-none-any.whl.metadata (4.3 kB)
+Collecting sniffio==1.3.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 190))
+  Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting soupsieve==2.8 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 191))
+  Downloading soupsieve-2.8-py3-none-any.whl.metadata (4.6 kB)
+Collecting SQLAlchemy==2.0.43 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 192))
+  Downloading sqlalchemy-2.0.43-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.6 kB)
+Collecting stack-data==0.6.3 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 193))
+  Downloading stack_data-0.6.3-py3-none-any.whl.metadata (18 kB)
+Collecting streamlit==1.51.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 194))
+  Downloading streamlit-1.51.0-py3-none-any.whl.metadata (9.5 kB)
+Collecting sympy==1.13.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 195))
+  Downloading sympy-1.13.1-py3-none-any.whl.metadata (12 kB)
+Collecting tenacity==9.1.2 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 196))
+  Downloading tenacity-9.1.2-py3-none-any.whl.metadata (1.2 kB)
+Collecting terminado==0.18.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 197))
+  Downloading terminado-0.18.1-py3-none-any.whl.metadata (5.8 kB)
+Collecting tiktoken==0.11.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 198))
+  Downloading tiktoken-0.11.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.7 kB)
+Collecting timm==1.0.20 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 199))
+  Downloading timm-1.0.20-py3-none-any.whl.metadata (61 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.7/61.7 kB 27.3 MB/s eta 0:00:00[2025-11-22 01:00:06.639314] 
+Collecting tinycss2==1.4.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 200))
+  Downloading tinycss2-1.4.0-py3-none-any.whl.metadata (3.0 kB)
+Collecting tokenizers==0.22.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 201))
+  Downloading tokenizers-0.22.1-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+Collecting toml==0.10.2 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 202))
+  Downloading toml-0.10.2-py2.py3-none-any.whl.metadata (7.1 kB)
+Collecting torch<3.0.0,>=2.0.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 203))
+  Downloading torch-2.9.1-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (30 kB)
+Collecting torchaudio<3.0.0,>=2.0.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 204))
+  Downloading torchaudio-2.9.1-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (6.9 kB)
+Collecting torchvision (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 205))
+  Downloading torchvision-0.24.1-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (5.9 kB)
+Collecting tornado==6.5.2 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 206))
+  Downloading tornado-6.5.2-cp39-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.8 kB)
+Collecting tqdm==4.67.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 207))
+  Downloading tqdm-4.67.1-py3-none-any.whl.metadata (57 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.7/57.7 kB 143.2 MB/s eta 0:00:00[2025-11-22 01:00:07.519931] 
+Collecting traitlets==5.14.3 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 208))
+  Downloading traitlets-5.14.3-py3-none-any.whl.metadata (10 kB)
+Collecting traits==7.0.2 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 209))
+  Downloading traits-7.0.2-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.8 kB)
+Collecting typer==0.19.2 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 210))
+  Downloading typer-0.19.2-py3-none-any.whl.metadata (16 kB)
+Collecting types-python-dateutil==2.9.0.20250822 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 211))
+  Downloading types_python_dateutil-2.9.0.20250822-py3-none-any.whl.metadata (1.8 kB)
+Collecting typing-inspect==0.9.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 212))
+  Downloading typing_inspect-0.9.0-py3-none-any.whl.metadata (1.5 kB)
+Collecting typing-inspection==0.4.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 213))
+  Downloading typing_inspection-0.4.1-py3-none-any.whl.metadata (2.6 kB)
+Collecting typing_extensions==4.15.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 214))
+  Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting tzdata==2025.2 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 215))
+  Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting uri-template==1.3.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 216))
+  Downloading uri_template-1.3.0-py3-none-any.whl.metadata (8.8 kB)
+Collecting urllib3==2.5.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 217))
+  Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting uvicorn==0.37.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 218))
+  Downloading uvicorn-0.37.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting watchdog==6.0.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 219))
+  Downloading watchdog-6.0.0-py3-none-manylinux2014_x86_64.whl.metadata (44 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.3/44.3 kB 145.8 MB/s eta 0:00:00[2025-11-22 01:00:08.279868] 
+Collecting watchfiles==1.1.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 220))
+  Downloading watchfiles-1.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+Collecting wcwidth==0.2.14 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 221))
+  Downloading wcwidth-0.2.14-py2.py3-none-any.whl.metadata (15 kB)
+Collecting webcolors==24.11.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 222))
+  Downloading webcolors-24.11.1-py3-none-any.whl.metadata (2.2 kB)
+Collecting webencodings==0.5.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 223))
+  Downloading webencodings-0.5.1-py2.py3-none-any.whl.metadata (2.1 kB)
+Collecting websocket-client==1.8.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 224))
+  Downloading websocket_client-1.8.0-py3-none-any.whl.metadata (8.0 kB)
+Collecting websockets==15.0.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 225))
+  Downloading websockets-15.0.1-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+Collecting yarl==1.20.1 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 226))
+  Downloading yarl-1.20.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (73 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.9/73.9 kB 131.2 MB/s eta 0:00:00[2025-11-22 01:00:09.290260] 
+Collecting zipp==3.23.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 227))
+  Downloading zipp-3.23.0-py3-none-any.whl.metadata (3.6 kB)
+Collecting zstandard==0.25.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 228))
+  Downloading zstandard-0.25.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (3.3 kB)
+Collecting hf-xet<2.0.0,>=1.1.3 (from huggingface-hub==0.35.1->-r /mount/src/luckstone-practicum-mda/requirements.txt (line 60))
+  Downloading hf_xet-1.2.1-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+Collecting pexpect>4.3 (from ipython==9.5.0->-r /mount/src/luckstone-practicum-mda/requirements.txt (line 66))
+  Downloading pexpect-4.9.0-py2.py3-none-any.whl.metadata (2.5 kB)
+Collecting setuptools>=41.1.0 (from jupyterlab==4.4.7->-r /mount/src/luckstone-practicum-mda/requirements.txt (line 83))
+  Downloading setuptools-80.9.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting ptyprocess (from terminado==0.18.1->-r /mount/src/luckstone-practicum-mda/requirements.txt (line 197))
+  Downloading ptyprocess-0.7.0-py2.py3-none-any.whl.metadata (1.3 kB)
+INFO: pip is looking at multiple versions of torch to determine which version is compatible with other requirements. This could take a while.
+Collecting torch<3.0.0,>=2.0.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 203))
+  Downloading torch-2.9.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (30 kB)
+  Downloading torch-2.8.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (30 kB)
+  Downloading torch-2.7.1-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (29 kB)
+  Downloading torch-2.7.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (29 kB)
+  Downloading torch-2.6.0-cp311-cp311-manylinux1_x86_64.whl.metadata (28 kB)
+Collecting nvidia-cuda-nvrtc-cu12==12.4.127 (from torch<3.0.0,>=2.0.0->-r /mount/src/luckstone-practicum-mda/requirements.txt (line 203))
+  Downloading nvidia_cuda_nvrtc_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-cuda-runtime-cu12==12.4.127 (from torch<3.0.0,>=2.0.0->-r /mount/src/luckstone-practicum-mda/requirements.txt (line 203))
+  Downloading nvidia_cuda_runtime_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-cuda-cupti-cu12==12.4.127 (from torch<3.0.0,>=2.0.0->-r /mount/src/luckstone-practicum-mda/requirements.txt (line 203))
+  Downloading nvidia_cuda_cupti_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl.metadata (1.6 kB)
+Collecting nvidia-cudnn-cu12==9.1.0.70 (from torch<3.0.0,>=2.0.0->-r /mount/src/luckstone-practicum-mda/requirements.txt (line 203))
+  Downloading nvidia_cudnn_cu12-9.1.0.70-py3-none-manylinux2014_x86_64.whl.metadata (1.6 kB)
+Collecting nvidia-cublas-cu12==12.4.5.8 (from torch<3.0.0,>=2.0.0->-r /mount/src/luckstone-practicum-mda/requirements.txt (line 203))
+  Downloading nvidia_cublas_cu12-12.4.5.8-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-cufft-cu12==11.2.1.3 (from torch<3.0.0,>=2.0.0->-r /mount/src/luckstone-practicum-mda/requirements.txt (line 203))
+  Downloading nvidia_cufft_cu12-11.2.1.3-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-curand-cu12==10.3.5.147 (from torch<3.0.0,>=2.0.0->-r /mount/src/luckstone-practicum-mda/requirements.txt (line 203))
+  Downloading nvidia_curand_cu12-10.3.5.147-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-cusolver-cu12==11.6.1.9 (from torch<3.0.0,>=2.0.0->-r /mount/src/luckstone-practicum-mda/requirements.txt (line 203))
+  Downloading nvidia_cusolver_cu12-11.6.1.9-py3-none-manylinux2014_x86_64.whl.metadata (1.6 kB)
+Collecting nvidia-cusparse-cu12==12.3.1.170 (from torch<3.0.0,>=2.0.0->-r /mount/src/luckstone-practicum-mda/requirements.txt (line 203))
+  Downloading nvidia_cusparse_cu12-12.3.1.170-py3-none-manylinux2014_x86_64.whl.metadata (1.6 kB)
+Collecting nvidia-cusparselt-cu12==0.6.2 (from torch<3.0.0,>=2.0.0->-r /mount/src/luckstone-practicum-mda/requirements.txt (line 203))
+  Downloading nvidia_cusparselt_cu12-0.6.2-py3-none-manylinux2014_x86_64.whl.metadata (6.8 kB)
+Collecting nvidia-nccl-cu12==2.21.5 (from torch<3.0.0,>=2.0.0->-r /mount/src/luckstone-practicum-mda/requirements.txt (line 203))
+  Downloading nvidia_nccl_cu12-2.21.5-py3-none-manylinux2014_x86_64.whl.metadata (1.8 kB)
+Collecting nvidia-nvtx-cu12==12.4.127 (from torch<3.0.0,>=2.0.0->-r /mount/src/luckstone-practicum-mda/requirements.txt (line 203))
+  Downloading nvidia_nvtx_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-nvjitlink-cu12==12.4.127 (from torch<3.0.0,>=2.0.0->-r /mount/src/luckstone-practicum-mda/requirements.txt (line 203))
+  Downloading nvidia_nvjitlink_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting triton==3.2.0 (from torch<3.0.0,>=2.0.0->-r /mount/src/luckstone-practicum-mda/requirements.txt (line 203))
+  Downloading triton-3.2.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.4 kB)
+Collecting torchaudio<3.0.0,>=2.0.0 (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 204))
+  Downloading torchaudio-2.9.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (6.9 kB)
+  Downloading torchaudio-2.8.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (7.2 kB)
+INFO: pip is still looking at multiple versions of torch to determine which version is compatible with other requirements. This could take a while.
+  Downloading torchaudio-2.7.1-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+  Downloading torchaudio-2.7.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+  Downloading torchaudio-2.6.0-cp311-cp311-manylinux1_x86_64.whl.metadata (6.6 kB)
+INFO: pip is looking at multiple versions of torchvision to determine which version is compatible with other requirements. This could take a while.
+Collecting torchvision (from -r /mount/src/luckstone-practicum-mda/requirements.txt (line 205))
+  Downloading torchvision-0.24.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (5.9 kB)
+  Downloading torchvision-0.23.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (6.1 kB)
+  Downloading torchvision-0.22.1-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (6.1 kB)
+  Downloading torchvision-0.22.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (6.1 kB)
+  Downloading torchvision-0.21.0-cp311-cp311-manylinux1_x86_64.whl.metadata (6.1 kB)
+Collecting uvloop>=0.15.1 (from uvicorn[standard]>=0.18.3->chromadb==1.1.0->-r /mount/src/luckstone-practicum-mda/requirements.txt (line 25))
+  Downloading uvloop-0.22.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (4.9 kB)
+Downloading acres-0.5.0-py3-none-any.whl (12 kB)
+Downloading aiohappyeyeballs-2.6.1-py3-none-any.whl (15 kB)
+Downloading aiohttp-3.12.15-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 59.1 MB/s eta 0:00:00[2025-11-22 01:00:26.371925] 
+Downloading aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+Downloading altair-5.5.0-py3-none-any.whl (731 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 731.2/731.2 kB 133.9 MB/s eta 0:00:00[2025-11-22 01:00:26.440054] 
+Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+Downloading anyio-4.11.0-py3-none-any.whl (109 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 109.1/109.1 kB 147.2 MB/s eta 0:00:00[2025-11-22 01:00:26.485617] 
+Downloading argon2_cffi-25.1.0-py3-none-any.whl (14 kB)
+Downloading argon2_cffi_bindings-25.1.0-cp39-abi3-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (87 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.1/87.1 kB 148.1 MB/s eta 0:00:00
+Downloading arrow-1.3.0-py3-none-any.whl (66 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.4/66.4 kB 66.8 MB/s eta 0:00:00[2025-11-22 01:00:26.539724] 
+Downloading asttokens-3.0.0-py3-none-any.whl (26 kB)
+Downloading async_lru-2.0.5-py3-none-any.whl (6.1 kB)
+Downloading attrs-25.3.0-py3-none-any.whl (63 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.8/63.8 kB 70.2 MB/s eta 0:00:00[2025-11-22 01:00:26.606330] 
+Downloading babel-2.17.0-py3-none-any.whl (10.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.2/10.2 MB 128.9 MB/s eta 0:00:00[2025-11-22 01:00:26.709118] 
+Downloading backoff-2.2.1-py3-none-any.whl (15 kB)
+Downloading bcrypt-4.3.0-cp39-abi3-manylinux_2_34_x86_64.whl (284 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 284.2/284.2 kB 131.5 MB/s eta 0:00:00[2025-11-22 01:00:26.746423] 
+Downloading beautifulsoup4-4.13.5-py3-none-any.whl (105 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 105.1/105.1 kB 107.3 MB/s eta 0:00:00[2025-11-22 01:00:26.769262] 
+Downloading bleach-6.2.0-py3-none-any.whl (163 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.4/163.4 kB 124.0 MB/s eta 0:00:00[2025-11-22 01:00:26.787502] 
+Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+Downloading build-1.3.0-py3-none-any.whl (23 kB)
+Downloading cachetools-5.5.2-py3-none-any.whl (10 kB)
+Downloading certifi-2025.8.3-py3-none-any.whl (161 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 161.2/161.2 kB 127.4 MB/s eta 0:00:00[2025-11-22 01:00:26.839824] 
+Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (215 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 215.6/215.6 kB 140.3 MB/s eta 0:00:00[2025-11-22 01:00:26.860006] 
+Downloading charset_normalizer-3.4.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (150 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 150.3/150.3 kB 117.3 MB/s eta 0:00:00[2025-11-22 01:00:26.880314] 
+Downloading chromadb-1.1.0-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (19.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 19.8/19.8 MB 97.4 MB/s eta 0:00:00[2025-11-22 01:00:27.109963] 
+Downloading ci_info-0.3.0-py3-none-any.whl (7.8 kB)
+Downloading click-8.3.0-py3-none-any.whl (107 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 132.3 MB/s eta 0:00:00[2025-11-22 01:00:27.141634] 
+Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Downloading coloredlogs-15.0.1-py2.py3-none-any.whl (46 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.0/46.0 kB 58.8 MB/s eta 0:00:00
+Downloading comm-0.2.3-py3-none-any.whl (7.3 kB)
+Downloading configobj-5.0.9-py2.py3-none-any.whl (35 kB)
+Downloading configparser-7.2.0-py3-none-any.whl (17 kB)
+Downloading dataclasses_json-0.6.7-py3-none-any.whl (28 kB)
+Downloading debugpy-1.8.17-cp311-cp311-manylinux_2_34_x86_64.whl (3.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 152.3 MB/s eta 0:00:00[2025-11-22 01:00:27.287909] 
+Downloading decorator-5.2.1-py3-none-any.whl (9.2 kB)
+Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+Downloading distro-1.9.0-py3-none-any.whl (20 kB)
+Downloading durationpy-0.10-py3-none-any.whl (3.9 kB)
+Downloading etelemetry-0.3.1-py3-none-any.whl (6.4 kB)
+Downloading executing-2.2.1-py2.py3-none-any.whl (28 kB)
+Downloading fastjsonschema-2.21.2-py3-none-any.whl (24 kB)
+Downloading filelock-3.19.1-py3-none-any.whl (15 kB)
+Downloading flatbuffers-25.2.10-py2.py3-none-any.whl (30 kB)
+Downloading fqdn-1.5.1-py3-none-any.whl (9.1 kB)
+Downloading frozenlist-1.7.0-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (235 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 235.3/235.3 kB 137.9 MB/s eta 0:00:00[2025-11-22 01:00:27.431302] 
+Downloading fsspec-2025.9.0-py3-none-any.whl (199 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 199.3/199.3 kB 158.9 MB/s eta 0:00:00[2025-11-22 01:00:27.452736] 
+Downloading ftfy-6.3.1-py3-none-any.whl (44 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.8/44.8 kB 24.7 MB/s eta 0:00:00[2025-11-22 01:00:27.476832] 
+Downloading gitdb-4.0.12-py3-none-any.whl (62 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.8/62.8 kB 42.9 MB/s eta 0:00:00[2025-11-22 01:00:27.497081] 
+Downloading gitpython-3.1.45-py3-none-any.whl (208 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 208.2/208.2 kB 107.7 MB/s eta 0:00:00[2025-11-22 01:00:27.526707] 
+Downloading google_auth-2.40.3-py2.py3-none-any.whl (216 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 216.1/216.1 kB 102.3 MB/s eta 0:00:00[2025-11-22 01:00:27.547216] 
+Downloading googleapis_common_protos-1.70.0-py3-none-any.whl (294 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 294.5/294.5 kB 150.7 MB/s eta 0:00:00[2025-11-22 01:00:27.565242] 
+Downloading greenlet-3.2.4-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (587 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 587.7/587.7 kB 204.6 MB/s eta 0:00:00[2025-11-22 01:00:27.609467] 
+Downloading grpcio-1.75.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (6.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.5/6.5 MB 128.6 MB/s eta 0:00:00[2025-11-22 01:00:27.678764] 
+Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.8/78.8 kB 130.6 MB/s eta 0:00:00[2025-11-22 01:00:27.710209] 
+Downloading httplib2-0.31.0-py3-none-any.whl (91 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.1/91.1 kB 131.5 MB/s eta 0:00:00[2025-11-22 01:00:27.729929] 
+Downloading httptools-0.6.4-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (459 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 459.8/459.8 kB 58.9 MB/s eta 0:00:00[2025-11-22 01:00:27.760078] 
+Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.5/73.5 kB 55.0 MB/s eta 0:00:00
+Downloading httpx_sse-0.4.1-py3-none-any.whl (8.1 kB)
+Downloading huggingface_hub-0.35.1-py3-none-any.whl (563 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 563.3/563.3 kB 177.6 MB/s eta 0:00:00[2025-11-22 01:00:27.820483] 
+Downloading humanfriendly-10.0-py2.py3-none-any.whl (86 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 86.8/86.8 kB 56.7 MB/s eta 0:00:00[2025-11-22 01:00:27.844898] 
+Downloading idna-3.10-py3-none-any.whl (70 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 70.4/70.4 kB 91.2 MB/s eta 0:00:00[2025-11-22 01:00:27.869454] 
+Downloading importlib_metadata-8.7.0-py3-none-any.whl (27 kB)
+Downloading importlib_resources-6.5.2-py3-none-any.whl (37 kB)
+Downloading ipykernel-6.30.1-py3-none-any.whl (117 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 117.5/117.5 kB 221.9 MB/s eta 0:00:00[2025-11-22 01:00:27.911499] 
+Downloading ipython-9.5.0-py3-none-any.whl (612 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 612.4/612.4 kB 127.9 MB/s eta 0:00:00[2025-11-22 01:00:27.935926] 
+Downloading ipython_pygments_lexers-1.1.1-py3-none-any.whl (8.1 kB)
+Downloading isoduration-20.11.0-py3-none-any.whl (11 kB)
+Downloading jedi-0.19.2-py2.py3-none-any.whl (1.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 94.9 MB/s eta 0:00:00[2025-11-22 01:00:28.004584] 
+Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 178.7 MB/s eta 0:00:00[2025-11-22 01:00:28.019916] 
+Downloading jiter-0.11.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (348 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 349.0/349.0 kB 230.6 MB/s eta 0:00:00[2025-11-22 01:00:28.037195] 
+Downloading json5-0.12.1-py3-none-any.whl (36 kB)
+Downloading jsonpatch-1.33-py2.py3-none-any.whl (12 kB)
+Downloading jsonpointer-3.0.0-py2.py3-none-any.whl (7.6 kB)
+Downloading jsonschema-4.25.1-py3-none-any.whl (90 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 90.0/90.0 kB 167.9 MB/s eta 0:00:00[2025-11-22 01:00:28.084908] 
+Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+Downloading jupyter_events-0.12.0-py3-none-any.whl (19 kB)
+Downloading jupyter_lsp-2.3.0-py3-none-any.whl (76 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 76.7/76.7 kB 104.2 MB/s eta 0:00:00[2025-11-22 01:00:28.125734] 
+Downloading jupyter_client-8.6.3-py3-none-any.whl (106 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 106.1/106.1 kB 168.9 MB/s eta 0:00:00[2025-11-22 01:00:28.140933] 
+Downloading jupyter_core-5.8.1-py3-none-any.whl (28 kB)
+Downloading jupyter_server-2.17.0-py3-none-any.whl (388 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 388.2/388.2 kB 202.2 MB/s eta 0:00:00[2025-11-22 01:00:28.171777] 
+Downloading jupyter_server_terminals-0.5.3-py3-none-any.whl (13 kB)
+Downloading jupyterlab-4.4.7-py3-none-any.whl (12.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.3/12.3 MB 78.1 MB/s eta 0:00:00[2025-11-22 01:00:28.358141] 
+Downloading jupyterlab_pygments-0.3.0-py3-none-any.whl (15 kB)
+Downloading jupyterlab_server-2.27.3-py3-none-any.whl (59 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 59.7/59.7 kB 91.9 MB/s eta 0:00:00[2025-11-22 01:00:28.392040] 
+Downloading kubernetes-33.1.0-py2.py3-none-any.whl (1.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 149.7 MB/s eta 0:00:00[2025-11-22 01:00:28.427838] 
+Downloading langchain-0.3.27-py3-none-any.whl (1.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 146.5 MB/s eta 0:00:00[2025-11-22 01:00:28.451492] 
+Downloading langchain_chroma-0.2.6-py3-none-any.whl (12 kB)
+Downloading langchain_community-0.3.29-py3-none-any.whl (2.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.5/2.5 MB 141.3 MB/s eta 0:00:00
+Downloading langchain_core-0.3.76-py3-none-any.whl (447 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 447.5/447.5 kB 135.2 MB/s eta 0:00:00[2025-11-22 01:00:28.522734] 
+Downloading langchain_experimental-0.3.4-py3-none-any.whl (209 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 209.2/209.2 kB 103.0 MB/s eta 0:00:00[2025-11-22 01:00:28.543646] 
+Downloading langchain_openai-0.3.33-py3-none-any.whl (74 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 75.0/75.0 kB 92.3 MB/s eta 0:00:00[2025-11-22 01:00:28.562269] 
+Downloading langchain_text_splitters-0.3.11-py3-none-any.whl (33 kB)
+Downloading langsmith-0.4.30-py3-none-any.whl (386 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 386.3/386.3 kB 130.3 MB/s eta 0:00:00[2025-11-22 01:00:28.596118] 
+Downloading lark-1.3.0-py3-none-any.whl (113 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 113.0/113.0 kB 73.9 MB/s eta 0:00:00[2025-11-22 01:00:28.613353] 
+Downloading looseversion-1.3.0-py2.py3-none-any.whl (8.2 kB)
+Downloading lxml-6.0.2-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (5.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.2/5.2 MB 183.1 MB/s eta 0:00:00[2025-11-22 01:00:28.669339] 
+Downloading markdown_it_py-4.0.0-py3-none-any.whl (87 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.3/87.3 kB 151.5 MB/s eta 0:00:00[2025-11-22 01:00:28.684290] 
+Downloading MarkupSafe-3.0.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (23 kB)
+Downloading marshmallow-3.26.1-py3-none-any.whl (50 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.9/50.9 kB 72.9 MB/s eta 0:00:00[2025-11-22 01:00:28.716924] 
+Downloading matplotlib_inline-0.1.7-py3-none-any.whl (9.9 kB)
+Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Downloading mistune-3.1.4-py3-none-any.whl (53 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 53.5/53.5 kB 119.8 MB/s eta 0:00:00[2025-11-22 01:00:28.763355] 
+Downloading mmh3-5.2.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (103 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.1/103.1 kB 121.0 MB/s eta 0:00:00
+Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 135.4 MB/s eta 0:00:00[2025-11-22 01:00:28.798359] 
+Downloading multidict-6.6.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (246 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 246.7/246.7 kB 4.0 MB/s eta 0:00:00[2025-11-22 01:00:28.876377] 
+Downloading mypy_extensions-1.1.0-py3-none-any.whl (5.0 kB)
+Downloading narwhals-2.10.0-py3-none-any.whl (418 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 418.1/418.1 kB 125.6 MB/s eta 0:00:00[2025-11-22 01:00:28.915281] 
+Downloading nbclient-0.10.2-py3-none-any.whl (25 kB)
+Downloading nbconvert-7.16.6-py3-none-any.whl (258 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 258.5/258.5 kB 93.3 MB/s eta 0:00:00[2025-11-22 01:00:28.956923] 
+Downloading nbformat-5.10.4-py3-none-any.whl (78 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.5/78.5 kB 103.6 MB/s eta 0:00:00[2025-11-22 01:00:28.982894] 
+Downloading nest_asyncio-1.6.0-py3-none-any.whl (5.2 kB)
+Downloading networkx-3.5-py3-none-any.whl (2.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 87.2 MB/s eta 0:00:00[2025-11-22 01:00:29.056550] 
+Downloading nibabel-5.3.2-py3-none-any.whl (3.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 105.3 MB/s eta 0:00:00[2025-11-22 01:00:29.119810] 
+Downloading nipype-1.10.0-py3-none-any.whl (3.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 84.9 MB/s eta 0:00:00[2025-11-22 01:00:29.187778] 
+Downloading notebook-7.4.5-py3-none-any.whl (14.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.3/14.3 MB 129.0 MB/s eta 0:00:00[2025-11-22 01:00:29.337355] 
+Downloading notebook_shim-0.2.4-py3-none-any.whl (13 kB)
+Downloading numpy-2.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 121.5 MB/s eta 0:00:00[2025-11-22 01:00:29.522875] 
+Downloading oauthlib-3.3.1-py3-none-any.whl (160 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 160.1/160.1 kB 71.3 MB/s eta 0:00:00[2025-11-22 01:00:29.546257] 
+Downloading onnxruntime-1.22.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.5/16.5 MB 126.4 MB/s eta 0:00:00[2025-11-22 01:00:29.707512] 
+Downloading open_clip_torch-3.2.0-py3-none-any.whl (1.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 139.0 MB/s eta 0:00:00[2025-11-22 01:00:29.742882] 
+Downloading openai-1.109.0-py3-none-any.whl (948 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 948.4/948.4 kB 176.4 MB/s eta 0:00:00[2025-11-22 01:00:29.765503] 
+Downloading opentelemetry_api-1.37.0-py3-none-any.whl (65 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 65.7/65.7 kB 124.0 MB/s eta 0:00:00[2025-11-22 01:00:29.782125] 
+Downloading opentelemetry_exporter_otlp_proto_common-1.37.0-py3-none-any.whl (18 kB)
+Downloading opentelemetry_exporter_otlp_proto_grpc-1.37.0-py3-none-any.whl (19 kB)
+Downloading opentelemetry_proto-1.37.0-py3-none-any.whl (72 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 72.5/72.5 kB 129.7 MB/s eta 0:00:00[2025-11-22 01:00:29.825085] 
+Downloading opentelemetry_sdk-1.37.0-py3-none-any.whl (131 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 131.9/131.9 kB 134.2 MB/s eta 0:00:00
+Downloading opentelemetry_semantic_conventions-0.58b0-py3-none-any.whl (207 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 208.0/208.0 kB 111.1 MB/s eta 0:00:00[2025-11-22 01:00:29.864902] 
+Downloading orjson-3.11.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (132 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 132.7/132.7 kB 135.0 MB/s eta 0:00:00
+Downloading overrides-7.7.0-py3-none-any.whl (17 kB)
+Downloading packaging-25.0-py3-none-any.whl (66 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 174.3 MB/s eta 0:00:00[2025-11-22 01:00:29.908030] 
+Downloading pandas-2.3.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.4/12.4 MB 114.0 MB/s eta 0:00:00[2025-11-22 01:00:30.031907] 
+Downloading pandocfilters-1.5.1-py2.py3-none-any.whl (8.7 kB)
+Downloading parso-0.8.5-py2.py3-none-any.whl (106 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 106.7/106.7 kB 146.4 MB/s eta 0:00:00[2025-11-22 01:00:30.057962] 
+Downloading pathlib-1.0.1-py3-none-any.whl (14 kB)
+Downloading pillow-11.3.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.6/6.6 MB 127.9 MB/s eta 0:00:00[2025-11-22 01:00:30.137004] 
+Downloading platformdirs-4.4.0-py3-none-any.whl (18 kB)
+Downloading posthog-5.4.0-py3-none-any.whl (105 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 105.4/105.4 kB 150.5 MB/s eta 0:00:00[2025-11-22 01:00:30.161446] 
+Downloading prometheus_client-0.23.1-py3-none-any.whl (61 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.1/61.1 kB 163.5 MB/s eta 0:00:00[2025-11-22 01:00:30.178300] 
+Downloading prompt_toolkit-3.0.52-py3-none-any.whl (391 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 391.4/391.4 kB 208.2 MB/s eta 0:00:00[2025-11-22 01:00:30.193750] 
+Downloading propcache-0.3.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (213 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 213.5/213.5 kB 112.7 MB/s eta 0:00:00[2025-11-22 01:00:30.211250] 
+Downloading protobuf-6.32.1-cp39-abi3-manylinux2014_x86_64.whl (322 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 322.0/322.0 kB 143.8 MB/s eta 0:00:00[2025-11-22 01:00:30.233191] 
+Downloading prov-2.1.1-py3-none-any.whl (425 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 425.9/425.9 kB 201.1 MB/s eta 0:00:00[2025-11-22 01:00:30.254320] 
+Downloading psutil-7.1.0-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (291 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 291.2/291.2 kB 218.7 MB/s eta 0:00:00[2025-11-22 01:00:30.268521] 
+Downloading pure_eval-0.2.3-py3-none-any.whl (11 kB)
+Downloading puremagic-1.30-py3-none-any.whl (43 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.3/43.3 kB 193.4 MB/s eta 0:00:00[2025-11-22 01:00:30.290940] 
+Downloading pyarrow-21.0.0-cp311-cp311-manylinux_2_28_x86_64.whl (42.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.8/42.8 MB 146.1 MB/s eta 0:00:00[2025-11-22 01:00:30.672139] 
+Downloading pyasn1-0.6.1-py3-none-any.whl (83 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 83.1/83.1 kB 96.3 MB/s eta 0:00:00[2025-11-22 01:00:30.693803] 
+Downloading pyasn1_modules-0.4.2-py3-none-any.whl (181 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 181.3/181.3 kB 160.6 MB/s eta 0:00:00[2025-11-22 01:00:30.715635] 
+Downloading pybase64-1.4.2-cp311-cp311-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl (71 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.4/71.4 kB 178.8 MB/s eta 0:00:00[2025-11-22 01:00:30.731509] 
+Downloading pycparser-2.23-py3-none-any.whl (118 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.1/118.1 kB 110.5 MB/s eta 0:00:00[2025-11-22 01:00:30.748992] 
+Downloading pydantic-2.11.9-py3-none-any.whl (444 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 444.9/444.9 kB 203.1 MB/s eta 0:00:00[2025-11-22 01:00:30.764941] 
+Downloading pydantic_settings-2.10.1-py3-none-any.whl (45 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.2/45.2 kB 138.5 MB/s eta 0:00:00[2025-11-22 01:00:30.778731] 
+Downloading pydantic_core-2.33.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 102.4 MB/s eta 0:00:00[2025-11-22 01:00:30.819726] 
+Downloading pydeck-0.9.1-py2.py3-none-any.whl (6.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.9/6.9 MB 78.3 MB/s eta 0:00:00
+Downloading pydot-4.0.1-py3-none-any.whl (37 kB)
+Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 125.3 MB/s eta 0:00:00[2025-11-22 01:00:30.967745] 
+Downloading pymupdf-1.26.4-cp39-abi3-manylinux_2_28_x86_64.whl (24.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 24.1/24.1 MB 93.9 MB/s eta 0:00:00[2025-11-22 01:00:31.208092] 
+Downloading pyparsing-3.2.5-py3-none-any.whl (113 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 113.9/113.9 kB 91.9 MB/s eta 0:00:00[2025-11-22 01:00:31.235334] 
+Downloading pyproject_hooks-1.2.0-py3-none-any.whl (10 kB)
+Downloading pyreadline3-3.5.4-py3-none-any.whl (83 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 83.2/83.2 kB 70.6 MB/s eta 0:00:00[2025-11-22 01:00:31.271142] 
+Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 106.1 MB/s eta 0:00:00[2025-11-22 01:00:31.293049] 
+Downloading python_dotenv-1.1.1-py3-none-any.whl (20 kB)
+Downloading python_json_logger-3.3.0-py3-none-any.whl (15 kB)
+Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 509.2/509.2 kB 48.3 MB/s eta 0:00:00[2025-11-22 01:00:31.346926] 
+Downloading pyxnat-1.6.3-py3-none-any.whl (95 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 95.4/95.4 kB 158.4 MB/s eta 0:00:00[2025-11-22 01:00:31.364949] 
+Downloading PyYAML-6.0.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (762 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 763.0/763.0 kB 50.1 MB/s eta 0:00:00[2025-11-22 01:00:31.400673] 
+Downloading pyzmq-27.1.0-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (857 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 857.0/857.0 kB 69.4 MB/s eta 0:00:00[2025-11-22 01:00:31.432490] 
+Downloading rdflib-7.2.1-py3-none-any.whl (565 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 565.4/565.4 kB 71.5 MB/s eta 0:00:00[2025-11-22 01:00:31.467630] 
+Downloading referencing-0.36.2-py3-none-any.whl (26 kB)
+Downloading regex-2025.9.18-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (798 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 799.0/799.0 kB 65.5 MB/s eta 0:00:00[2025-11-22 01:00:31.511651] 
+Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 143.4 MB/s eta 0:00:00[2025-11-22 01:00:31.526876] 
+Downloading requests_oauthlib-2.0.0-py2.py3-none-any.whl (24 kB)
+Downloading requests_toolbelt-1.0.0-py2.py3-none-any.whl (54 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 54.5/54.5 kB 91.0 MB/s eta 0:00:00[2025-11-22 01:00:31.558821] 
+Downloading rfc3339_validator-0.1.4-py2.py3-none-any.whl (3.5 kB)
+Downloading rfc3986_validator-0.1.1-py2.py3-none-any.whl (4.2 kB)
+Downloading rfc3987_syntax-1.1.0-py3-none-any.whl (8.0 kB)
+Downloading rich-14.1.0-py3-none-any.whl (243 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 243.4/243.4 kB 134.3 MB/s eta 0:00:00[2025-11-22 01:00:31.632085] 
+Downloading rpds_py-0.27.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (384 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 384.1/384.1 kB 140.8 MB/s eta 0:00:00
+Downloading rsa-4.9.1-py3-none-any.whl (34 kB)
+Downloading safetensors-0.6.2-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (485 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 485.8/485.8 kB 79.6 MB/s eta 0:00:00
+Downloading scipy-1.16.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.9/35.9 MB 67.1 MB/s eta 0:00:00[2025-11-22 01:00:32.290699] 
+Downloading Send2Trash-1.8.3-py3-none-any.whl (18 kB)
+Downloading shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+Downloading simplejson-3.20.1-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (144 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 144.8/144.8 kB 153.8 MB/s eta 0:00:00[2025-11-22 01:00:32.332213] 
+Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Downloading smmap-5.0.2-py3-none-any.whl (24 kB)
+Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+Downloading soupsieve-2.8-py3-none-any.whl (36 kB)
+Downloading sqlalchemy-2.0.43-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 70.1 MB/s eta 0:00:00[2025-11-22 01:00:32.451697] 
+Downloading stack_data-0.6.3-py3-none-any.whl (24 kB)
+Downloading streamlit-1.51.0-py3-none-any.whl (10.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.2/10.2 MB 61.8 MB/s eta 0:00:00
+Downloading sympy-1.13.1-py3-none-any.whl (6.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.2/6.2 MB 47.2 MB/s eta 0:00:00[2025-11-22 01:00:32.804099] 
+Downloading tenacity-9.1.2-py3-none-any.whl (28 kB)
+Downloading terminado-0.18.1-py3-none-any.whl (14 kB)
+Downloading tiktoken-0.11.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 59.2 MB/s eta 0:00:00[2025-11-22 01:00:32.869239] 
+Downloading timm-1.0.20-py3-none-any.whl (2.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.5/2.5 MB 52.5 MB/s eta 0:00:00[2025-11-22 01:00:32.937964] 
+Downloading tinycss2-1.4.0-py3-none-any.whl (26 kB)
+Downloading tokenizers-0.22.1-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 53.2 MB/s eta 0:00:00[2025-11-22 01:00:33.025476] 
+Downloading toml-0.10.2-py2.py3-none-any.whl (16 kB)
+Downloading tornado-6.5.2-cp39-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (443 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 443.9/443.9 kB 61.2 MB/s eta 0:00:00[2025-11-22 01:00:33.062697] 
+Downloading tqdm-4.67.1-py3-none-any.whl (78 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.5/78.5 kB 131.2 MB/s eta 0:00:00[2025-11-22 01:00:33.077298] 
+Downloading traitlets-5.14.3-py3-none-any.whl (85 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 85.4/85.4 kB 134.4 MB/s eta 0:00:00[2025-11-22 01:00:33.091239] 
+Downloading traits-7.0.2-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (5.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.1/5.1 MB 53.1 MB/s eta 0:00:00[2025-11-22 01:00:33.205034] 
+Downloading typer-0.19.2-py3-none-any.whl (46 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.7/46.7 kB 114.0 MB/s eta 0:00:00[2025-11-22 01:00:33.221468] 
+Downloading types_python_dateutil-2.9.0.20250822-py3-none-any.whl (17 kB)
+Downloading typing_inspect-0.9.0-py3-none-any.whl (8.8 kB)
+Downloading typing_inspection-0.4.1-py3-none-any.whl (14 kB)
+Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 85.2 MB/s eta 0:00:00[2025-11-22 01:00:33.277813] 
+Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 347.8/347.8 kB 159.1 MB/s eta 0:00:00[2025-11-22 01:00:33.294145] 
+Downloading uri_template-1.3.0-py3-none-any.whl (11 kB)
+Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 152.1 MB/s eta 0:00:00[2025-11-22 01:00:33.322431] 
+Downloading uvicorn-0.37.0-py3-none-any.whl (67 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 68.0/68.0 kB 124.2 MB/s eta 0:00:00[2025-11-22 01:00:33.338543] 
+Downloading watchdog-6.0.0-py3-none-manylinux2014_x86_64.whl (79 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 79.1/79.1 kB 112.0 MB/s eta 0:00:00[2025-11-22 01:00:33.354221] 
+Downloading watchfiles-1.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (453 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 453.1/453.1 kB 60.5 MB/s eta 0:00:00[2025-11-22 01:00:33.380382] 
+Downloading wcwidth-0.2.14-py2.py3-none-any.whl (37 kB)
+Downloading webcolors-24.11.1-py3-none-any.whl (14 kB)
+Downloading webencodings-0.5.1-py2.py3-none-any.whl (11 kB)
+Downloading websocket_client-1.8.0-py3-none-any.whl (58 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.8/58.8 kB 24.4 MB/s eta 0:00:00[2025-11-22 01:00:33.428120] 
+Downloading websockets-15.0.1-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (182 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 182.3/182.3 kB 198.6 MB/s eta 0:00:00[2025-11-22 01:00:33.442660] 
+Downloading yarl-1.20.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (348 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 349.0/349.0 kB 150.8 MB/s eta 0:00:00[2025-11-22 01:00:33.460905] 
+Downloading zipp-3.23.0-py3-none-any.whl (10 kB)
+Downloading zstandard-0.25.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.6/5.6 MB 51.8 MB/s eta 0:00:00[2025-11-22 01:00:33.597480] 
+Downloading torch-2.6.0-cp311-cp311-manylinux1_x86_64.whl (766.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 766.7/766.7 MB 34.3 MB/s eta 0:00:00[2025-11-22 01:00:47.892801] 
+Downloading nvidia_cublas_cu12-12.4.5.8-py3-none-manylinux2014_x86_64.whl (363.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 363.4/363.4 MB 55.8 MB/s eta 0:00:00[2025-11-22 01:00:56.197037] 
+Downloading nvidia_cuda_cupti_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (13.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.8/13.8 MB 58.7 MB/s eta 0:00:00[2025-11-22 01:00:56.446683] 
+Downloading nvidia_cuda_nvrtc_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (24.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 24.6/24.6 MB 58.7 MB/s eta 0:00:00[2025-11-22 01:00:56.880084] 
+Downloading nvidia_cuda_runtime_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (883 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 883.7/883.7 kB 82.6 MB/s eta 0:00:00[2025-11-22 01:00:56.911223] 
+Downloading nvidia_cudnn_cu12-9.1.0.70-py3-none-manylinux2014_x86_64.whl (664.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 664.8/664.8 MB 56.8 MB/s eta 0:00:00[2025-11-22 01:01:09.463081] 
+Downloading nvidia_cufft_cu12-11.2.1.3-py3-none-manylinux2014_x86_64.whl (211.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 211.5/211.5 MB 49.9 MB/s eta 0:00:00[2025-11-22 01:01:15.294413] 
+Downloading nvidia_curand_cu12-10.3.5.147-py3-none-manylinux2014_x86_64.whl (56.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.3/56.3 MB 56.4 MB/s eta 0:00:00
+Downloading nvidia_cusolver_cu12-11.6.1.9-py3-none-manylinux2014_x86_64.whl (127.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 127.9/127.9 MB 39.2 MB/s eta 0:00:00
+Downloading nvidia_cusparse_cu12-12.3.1.170-py3-none-manylinux2014_x86_64.whl (207.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 207.5/207.5 MB 81.0 MB/s eta 0:00:00[2025-11-22 01:01:21.958035] 
+Downloading nvidia_cusparselt_cu12-0.6.2-py3-none-manylinux2014_x86_64.whl (150.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 150.1/150.1 MB 77.5 MB/s eta 0:00:00[2025-11-22 01:01:23.913646] 
+Downloading nvidia_nccl_cu12-2.21.5-py3-none-manylinux2014_x86_64.whl (188.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 188.7/188.7 MB 103.9 MB/s eta 0:00:00[2025-11-22 01:01:26.028500] 
+Downloading nvidia_nvjitlink_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (21.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 21.1/21.1 MB 104.9 MB/s eta 0:00:00[2025-11-22 01:01:26.244082] 
+Downloading nvidia_nvtx_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl (99 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 99.1/99.1 kB 32.8 MB/s eta 0:00:00[2025-11-22 01:01:26.269131] 
+Downloading triton-3.2.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (253.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 253.2/253.2 MB 130.7 MB/s eta 0:00:00[2025-11-22 01:01:28.545614] 
+Downloading torchaudio-2.6.0-cp311-cp311-manylinux1_x86_64.whl (3.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.4/3.4 MB 139.0 MB/s eta 0:00:00[2025-11-22 01:01:28.585908] 
+Downloading torchvision-0.21.0-cp311-cp311-manylinux1_x86_64.whl (7.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.2/7.2 MB 141.7 MB/s eta 0:00:00[2025-11-22 01:01:28.652813] 
+Downloading hf_xet-1.2.1-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (19.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 19.5/19.5 MB 132.8 MB/s eta 0:00:00[2025-11-22 01:01:28.810330] 
+Downloading pexpect-4.9.0-py2.py3-none-any.whl (63 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.8/63.8 kB 120.5 MB/s eta 0:00:00[2025-11-22 01:01:28.827632] 
+Downloading ptyprocess-0.7.0-py2.py3-none-any.whl (13 kB)
+Downloading setuptools-80.9.0-py3-none-any.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 153.3 MB/s eta 0:00:00[2025-11-22 01:01:28.858828] 
+Downloading uvloop-0.22.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (3.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.8/3.8 MB 132.0 MB/s eta 0:00:00[2025-11-22 01:01:28.903111] 
+Building wheels for collected packages: PyPika, pywinpty
+  Building wheel for PyPika (pyproject.toml): started
+  Building wheel for PyPika (pyproject.toml): finished with status 'done'
+  Created wheel for PyPika: filename=pypika-0.48.9-py2.py3-none-any.whl size=53803 sha256=31ed7acb5de10fb2bc8bc0146e8fc9839cdd068c8dcbe97f1674ba7867e5a6db
+  Stored in directory: /tmp/pip-ephem-wheel-cache-ja6kt5q7/wheels/a3/01/bd/4c40ceb9d5354160cb186dcc153360f4ab7eb23e2b24daf96d
+  Building wheel for pywinpty (pyproject.toml): started
+  Building wheel for pywinpty (pyproject.toml): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × Building wheel for pywinpty (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [84 lines of output]
+      Running `maturin pep517 build-wheel -i /home/adminuser/venv/bin/python --compatibility off`
+      Python reports SOABI: cpython-311-x86_64-linux-gnu
+      Computed rustc target triple: x86_64-unknown-linux-gnu
+      Installation directory: /home/adminuser/.cache/puccinialin
+      Rustup already downloaded
+      Installing rust to /home/adminuser/.cache/puccinialin/rustup
+      warn: It looks like you have an existing rustup settings file at:
+      warn: /home/adminuser/.rustup/settings.toml
+      warn: Rustup will install the default toolchain as specified in the settings file,
+      warn: instead of the one inferred from the default host triple.
+      info: profile set to 'minimal'
+      info: default host triple is x86_64-unknown-linux-gnu
+      warn: Updating existing toolchain, profile choice will be ignored
+      info: syncing channel updates for 'stable-x86_64-unknown-linux-gnu'
+      info: default toolchain set to 'stable-x86_64-unknown-linux-gnu'
+      Checking if cargo is installed
+      cargo 1.91.1 (ea2d97820 2025-10-10)
+      📦 Including license file `LICENSE.txt`
+      🍹 Building a mixed python/rust project
+      🔗 Found pyo3 bindings
+      🐍 Found CPython 3.11 at /home/adminuser/venv/bin/python
+         Compiling proc-macro2 v1.0.95
+         Compiling unicode-ident v1.0.18
+         Compiling target-lexicon v0.13.2
+         Compiling windows-link v0.1.3
+         Compiling autocfg v1.5.0
+         Compiling once_cell v1.21.3
+         Compiling serde v1.0.219
+         Compiling serde_json v1.0.142
+         Compiling rustix v1.0.8
+         Compiling linux-raw-sys v0.9.4
+         Compiling bitflags v2.9.1
+         Compiling ryu v1.0.20
+         Compiling itoa v1.0.15
+         Compiling memchr v2.7.5
+         Compiling env_home v0.1.0
+         Compiling windows-result v0.3.4
+         Compiling windows-strings v0.4.2
+         Compiling windows-threading v0.1.0
+         Compiling glob v0.3.2
+         Compiling libc v0.2.175
+         Compiling crossbeam-utils v0.8.21
+         Compiling heck v0.5.0
+         Compiling unindent v0.2.4
+         Compiling indoc v2.0.6
+         Compiling num-traits v0.2.19
+         Compiling memoffset v0.9.1
+         Compiling pywinpty v3.0.0 (/tmp/pip-install-8ik7p13c/pywinpty_93a0a4a071af4ca08f629ee9339109f8)
+      error[E0425]: cannot find function `command_ok` in this scope
+        --> build.rs:27:27
+         |
+      27 |         let nuget_found = command_ok(nuget.arg("help"));
+         |                           ^^^^^^^^^^ not found in this scope
+         |
+      note: found an item that was configured out
+        --> build.rs:8:4
+         |
+       7 | #[cfg(windows)]
+         |       ------- the item is gated here
+       8 | fn command_ok(cmd: &mut Command) -> bool {
+         |    ^^^^^^^^^^
+      
+      error[E0425]: cannot find function `command_ok` in this scope
+        --> build.rs:33:12
+         |
+      33 |         if command_ok(
+         |            ^^^^^^^^^^ not found in this scope
+         |
+      note: found an item that was configured out
+        --> build.rs:8:4
+         |
+       7 | #[cfg(windows)]
+         |       ------- the item is gated here
+       8 | fn command_ok(cmd: &mut Command) -> bool {
+         |    ^^^^^^^^^^
+      
+      For more information about this error, try `rustc --explain E0425`.
+      error: could not compile `pywinpty` (build script) due to 2 previous errors
+      warning: build failed, waiting for other jobs to finish...
+      💥 maturin failed
+        Caused by: Failed to build a native library through cargo
+        Caused by: Cargo build finished with "exit status: 101": `env -u CARGO PYO3_BUILD_EXTENSION_MODULE="1" PYO3_ENVIRONMENT_SIGNATURE="cpython-3.11-64bit" PYO3_PYTHON="/home/adminuser/venv/bin/python" PYTHON_SYS_EXECUTABLE="/home/adminuser/venv/bin/python" "cargo" "rustc" "--profile" "release" "--message-format" "json-render-diagnostics" "--manifest-path" "/tmp/pip-install-8ik7p13c/pywinpty_93a0a4a071af4ca08f629ee9339109f8/Cargo.toml" "--lib"`
+      Rust not found, installing into a temporary directory
+      Error: command ['maturin', 'pep517', 'build-wheel', '-i', '/home/adminuser/venv/bin/python', '--compatibility', 'off'] returned non-zero exit status 1
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for pywinpty
+Successfully built PyPika
+Failed to build pywinpty
+ERROR: Could not build wheels for pywinpty, which is required to install pyproject.toml-based projects
+
+[notice] A new release of pip is available: 24.0 -> 25.3
+[notice] To update, run: pip install --upgrade pip
+Checking if Streamlit is installed
+Installing rich for an improved exception logging
+Using standard pip install.
+Collecting rich>=10.14.0
+  Downloading rich-14.2.0-py3-none-any.whl.metadata (18 kB)
+Collecting markdown-it-py>=2.2.0 (from rich>=10.14.0)
+  Downloading markdown_it_py-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+Collecting pygments<3.0.0,>=2.13.0 (from rich>=10.14.0)
+  Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=10.14.0)
+  Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Downloading rich-14.2.0-py3-none-any.whl (243 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 243.4/243.4 kB 14.8 MB/s eta 0:00:00[2025-11-22 01:02:02.641861] 
+Downloading markdown_it_py-4.0.0-py3-none-any.whl (87 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.3/87.3 kB 201.4 MB/s eta 0:00:00[2025-11-22 01:02:02.651957] 
+Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 86.5 MB/s eta 0:00:00[2025-11-22 01:02:02.678040] 
+Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Installing collected packages: pygments, mdurl, markdown-it-py, rich
+  Attempting uninstall: pygments
+    Found existing installation: Pygments 2.19.2
+    Uninstalling Pygments-2.19.2:
+      Successfully uninstalled Pygments-2.19.2
+  Attempting uninstall: mdurl
+    Found existing installation: mdurl 0.1.2
+    Uninstalling mdurl-0.1.2:
+      Successfully uninstalled mdurl-0.1.2
+  Attempting uninstall: markdown-it-py
+    Found existing installation: markdown-it-py 4.0.0
+    Uninstalling markdown-it-py-4.0.0:
+      Successfully uninstalled markdown-it-py-4.0.0
+  Attempting uninstall: rich
+    Found existing installation: rich 14.2.0
+    Uninstalling rich-14.2.0:
+      Successfully uninstalled rich-14.2.0
+Successfully installed markdown-it-py-4.0.0 mdurl-0.1.2 pygments-2.19.2 rich-14.2.0
+
+[notice] A new release of pip is available: 24.0 -> 25.3
+[notice] To update, run: pip install --upgrade pip
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+[01:02:05] ❗️ installer returned a non-zero exit code
+[01:02:05] ❗️ Error during processing dependencies! Please fix the error and push an update, or try restarting the app.
