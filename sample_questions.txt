@@ -1,0 +1,49 @@
+# torch==2.6.0+cu124
+# torchaudio==2.6.0+cu124
+# torchvision==0.21.0+cu124
+
+Visual/Diagram-Based Questions (Tests Image Retrieval)
+
+What are the main components of the cone crusher? (Requires interpreting Figure 3)
+Where is the machine identification plate located on the crusher?
+What special tools are needed to handle the head ball and liner socket?
+Can you describe the lifting points on the main frame?
+What does safety label callout #11 indicate about required PPE?
+
+Technical Specifications & Measurements
+
+What is the maximum drop height for feed materials (dimension H)?
+What are the dimension values for A, B, and I on the crusher?
+What is the required nitrogen pressure for the accumulators?
+What should the oil temperature be before starting the oil pump?
+How much should the countershaft be able to move leftwards and rightwards?
+
+Procedural/Sequential Questions
+
+What are the steps for the Lock Out, Tag Out, and Try Out procedure?
+What checks must be performed prior to starting up the crusher for the first time?
+How do you check the nitrogen pressure in the accumulators?
+What is the procedure for fitting the motor to the crusher?
+What are the daily crusher start-up procedures?
+
+Safety & Compliance Questions
+
+What personal protective equipment (PPE) is required when operating this equipment?
+What are the confined space entry requirements?
+At what height does fall prevention equipment become mandatory?
+What qualifications are required for personnel operating lifting devices?
+What is the procedure if you discover oil leakage in the hydraulic circuit?
+
+Contextual Understanding Questions
+
+Why is it dangerous to lift the crusher with the motor attached?
+What are the two key factors to consider when designing the piping system?
+Why are leaks from suction pipes particularly dangerous compared to pressurized pipes?
+What should you do if the mantle touches the bowl liner when rotating the countershaft by hand?
+What is the purpose of the oil retention tray and when should it be installed?
+
+Multi-Step Reasoning Questions
+
+If I need to perform maintenance inside the crusher, what safety procedures must I follow before entering?
+What preparations are necessary before connecting the lubrication system?
+If the crusher has not been in use for a while, what should be consulted and what checks performed before starting?
