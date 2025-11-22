@@ -48,16 +48,36 @@ PRETRAINED  = "laion2b_s34b_b79k"    # 512-dim embeddings; great default for CLI
 # --- Hardware selection: use GPU if available, else CPU
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
+
+
+
 # --- Make sure directories exist
 PERSIST_DIR.mkdir(parents=True, exist_ok=True)
 IMG_DIR.mkdir(parents=True, exist_ok=True)
 
+# --- For Langchain - FIXED to work with both local .env and Streamlit Cloud
+# Try to load from .env file first (for local development)
+dotenv.load_dotenv()
+openai_api_key = os.getenv("OPENAI_API_KEY")
 
-# --- For Langchain
-openai_api_key = dotenv.get_key(".env", "OPENAI_API_KEY")
+# If not found in environment, try Streamlit secrets (for cloud deployment)
 if openai_api_key is None:
-    raise ValueError("OPENAI_API_KEY not found in .env file.")
-os.environ["OPENAI_API_KEY"] = openai_api_key  # adjust as needed
+    try:
+        import streamlit as st
+        openai_api_key = st.secrets.get("OPENAI_API_KEY")
+    except Exception:
+        pass  # Not running in Streamlit or secrets not configured
+
+# Final check - raise error if still not found
+if openai_api_key is None:
+    raise ValueError(
+        "OPENAI_API_KEY not found. "
+        "For local development, add it to .env file. "
+        "For Streamlit Cloud, add it in Settings > Secrets"
+    )
+
+os.environ["OPENAI_API_KEY"] = openai_api_key
+
 # --- Config knobs
 TOP_K_TEXT   = 6
 TOP_K_IMAGES = 3
