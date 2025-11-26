@@ -337,7 +337,7 @@ def ingest_pdf_images(
 # Ingesting PDF Images into Chroma
 
 added_ids = ingest_pdf_images(
-    pdf_path=Path("Data/Nordberg HP300 Cone Crusher Manual.pdf"),
+    pdf_path=Path("./Nordberg HP300 Cone Crusher Manual.pdf"),
     image_output_dir=Path("IMGs/Nordberg HP300 Cone Crusher Manual/images"),
     min_dim=96,          # ignore tiny icons
     min_area=12_000      # ignore small separators
