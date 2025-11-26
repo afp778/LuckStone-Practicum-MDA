@@ -64,7 +64,7 @@ openai_api_key = os.getenv("OPENAI_API_KEY")
 if openai_api_key is None:
     try:
         import streamlit as st
-        openai_api_key = st.secrets.get("OPENAI_API_KEY")
+        openai_api_key = st.secrets["OPENAI_API_KEY"]
     except Exception:
         pass  # Not running in Streamlit or secrets not configured
 
