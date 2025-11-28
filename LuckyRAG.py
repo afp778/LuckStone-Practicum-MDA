@@ -352,39 +352,34 @@ def log_progress(message: str):
 def initialize_vectorstore():
     """
     Initialize or load vectorstore.
-    Checks for existing DB, otherwise builds from scratch.
-    This is called once and cached by Streamlit.
+    Builds in-memory for Streamlit Cloud (rebuilds on each cold start).
     """
-    # Check if we have an existing vectorstore
-    db_file = PERSIST_DIR / "chroma.sqlite3"
     
-    if db_file.exists():
-        try:
-            vs = Chroma(
-                collection_name=COLLECTION_NAME,
-                persist_directory=str(PERSIST_DIR),
-                embedding_function=clip_embedder
-            )
-            # Verify it has data
-            count = vs._collection.count()
-            if count > 0:
-                log_progress(f"✅ Loaded existing vectorstore with {count} items")
-                return vs
-        except Exception as e:
-            log_progress(f"⚠️ Existing vectorstore corrupted, rebuilding: {e}")
+    # Build new vectorstore (IN-MEMORY - no persist_directory)
+    log_progress("🔧 Building vectorstore in-memory (2-3 minutes)...")
     
-    # Build new vectorstore
-    log_progress("🔧 Building vectorstore from scratch (2-3 minutes)...")
+    # DEBUG: Check if PDF exists
+    if not PDF.exists():
+        error_msg = f"❌ PDF not found at {PDF}"
+        log_progress(error_msg)
+        raise FileNotFoundError(error_msg)
+    else:
+        log_progress(f"✅ PDF found at {PDF}")
+    
+    # DEBUG: Create image directory
+    IMG_DIR.mkdir(parents=True, exist_ok=True)
+    log_progress(f"✅ Image directory created at {IMG_DIR}")
+    
+    # IN-MEMORY VECTORSTORE - no persist_directory parameter
     vs = Chroma(
         collection_name=COLLECTION_NAME,
-        persist_directory=str(PERSIST_DIR),
+        # persist_directory=str(PERSIST_DIR),  # ❌ Remove this line
         embedding_function=clip_embedder
     )
     
     # Extract and index images from PDF
     log_progress("🖼️ Extracting images from PDF...")
     try:
-        # Note: ingest_pdf_images is defined later in this file
         added_ids = ingest_pdf_images(
             pdf_path=PDF,
             vectorstore=vs,
@@ -393,13 +388,22 @@ def initialize_vectorstore():
             min_area=12_000
         )
         log_progress(f"✅ Indexed {len(added_ids)} images")
+        
+        # DEBUG: Verify data was added
+        final_count = vs._collection.count()
+        log_progress(f"✅ Final vectorstore count: {final_count} items")
+        
+        if final_count == 0:
+            log_progress("⚠️ WARNING: Vectorstore is empty after indexing!")
+        
     except Exception as e:
         log_progress(f"❌ Error during image ingestion: {e}")
+        import traceback
+        log_progress(f"Traceback: {traceback.format_exc()}")
         raise
     
-    # Persist to disk
-    vs.persist()
-    log_progress("💾 Vectorstore ready!")
+    # No need to persist since it's in-memory
+    log_progress("💾 In-memory vectorstore ready!")
     
     return vs
 
@@ -416,7 +420,6 @@ try:
 except ImportError:
     # Not running in Streamlit - initialize directly
     vectorstore = initialize_vectorstore()
-
 # -------------------------------------------
 # RETRIEVERS + DEMOS
 # -------------------------------------------
