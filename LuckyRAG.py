@@ -267,7 +267,9 @@ def extract_images_from_pdf(
 
 def add_images_to_chroma(
     images: List[Dict],
+    vectorstore,
     modality_tag: str = "image"
+    
 ) -> List[str]:
     """
     Add extracted images to the existing Chroma vector store using OpenCLIP.
@@ -311,6 +313,7 @@ def add_images_to_chroma(
 
 def ingest_pdf_images(
     pdf_path: Path,
+    vectorstore,
     image_output_dir: Path,
     min_dim: int = 64,
     min_area: int = 4096,
@@ -324,7 +327,7 @@ def ingest_pdf_images(
         min_dim=min_dim,
         min_area=min_area,
     )
-    return add_images_to_chroma(extracted)
+    return add_images_to_chroma(extracted, vectorstore)
 
 # Ingesting PDF Images into Chroma
 
@@ -345,7 +348,7 @@ def log_progress(message: str):
         st.sidebar.info(message)
     except:
         pass
-    
+
 def initialize_vectorstore():
     """
     Initialize or load vectorstore.
@@ -384,6 +387,7 @@ def initialize_vectorstore():
         # Note: ingest_pdf_images is defined later in this file
         added_ids = ingest_pdf_images(
             pdf_path=PDF,
+            vectorstore=vs,
             image_output_dir=IMG_DIR,
             min_dim=96,
             min_area=12_000
