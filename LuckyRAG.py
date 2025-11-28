@@ -115,82 +115,9 @@ clip_embedder = OpenCLIPEmbeddings(
     checkpoint="laion2b_s34b_b79k"
 )
 
-# ---- 2) Initialize vectorstore with auto-rebuild for Streamlit Cloud
-def log_progress(message: str):
-    """Log progress to console and Streamlit if available"""
-    print(message)
-    try:
-        import streamlit as st
-        st.sidebar.info(message)
-    except:
-        pass
 
-def initialize_vectorstore():
-    """
-    Initialize or load vectorstore.
-    Checks for existing DB, otherwise builds from scratch.
-    This is called once and cached by Streamlit.
-    """
-    # Check if we have an existing vectorstore
-    db_file = PERSIST_DIR / "chroma.sqlite3"
-    
-    if db_file.exists():
-        try:
-            vs = Chroma(
-                collection_name=COLLECTION_NAME,
-                persist_directory=str(PERSIST_DIR),
-                embedding_function=clip_embedder
-            )
-            # Verify it has data
-            count = vs._collection.count()
-            if count > 0:
-                log_progress(f"✅ Loaded existing vectorstore with {count} items")
-                return vs
-        except Exception as e:
-            log_progress(f"⚠️ Existing vectorstore corrupted, rebuilding: {e}")
-    
-    # Build new vectorstore
-    log_progress("🔧 Building vectorstore from scratch (2-3 minutes)...")
-    vs = Chroma(
-        collection_name=COLLECTION_NAME,
-        persist_directory=str(PERSIST_DIR),
-        embedding_function=clip_embedder
-    )
-    
-    # Extract and index images from PDF
-    log_progress("🖼️ Extracting images from PDF...")
-    try:
-        # Note: ingest_pdf_images is defined later in this file
-        added_ids = ingest_pdf_images(
-            pdf_path=PDF,
-            image_output_dir=IMG_DIR,
-            min_dim=96,
-            min_area=12_000
-        )
-        log_progress(f"✅ Indexed {len(added_ids)} images")
-    except Exception as e:
-        log_progress(f"❌ Error during image ingestion: {e}")
-        raise
-    
-    # Persist to disk
-    vs.persist()
-    log_progress("💾 Vectorstore ready!")
-    
-    return vs
 
-# Wrap initialization with Streamlit caching
-try:
-    import streamlit as st
-    
-    @st.cache_resource(show_spinner=False)
-    def get_cached_vectorstore():
-        """Cached wrapper - builds once per Streamlit deployment"""
-        return initialize_vectorstore()
-    
-    vectorstore = get_cached_vectorstore()
-except ImportError:
-    # Not running in Streamlit - initialize directly
-    vectorstore = initialize_vectorstore()
+
 # -------------------------------------------
 # TEXT INGESTION UTILITIES
 # -------------------------------------------
@@ -409,6 +336,82 @@ def ingest_pdf_images(
 # )
 # print(f"Indexed {len(added_ids)} images")
 
+# ---- 2) Initialize vectorstore with auto-rebuild for Streamlit Cloud
+def log_progress(message: str):
+    """Log progress to console and Streamlit if available"""
+    print(message)
+    try:
+        import streamlit as st
+        st.sidebar.info(message)
+    except:
+        pass
+    
+def initialize_vectorstore():
+    """
+    Initialize or load vectorstore.
+    Checks for existing DB, otherwise builds from scratch.
+    This is called once and cached by Streamlit.
+    """
+    # Check if we have an existing vectorstore
+    db_file = PERSIST_DIR / "chroma.sqlite3"
+    
+    if db_file.exists():
+        try:
+            vs = Chroma(
+                collection_name=COLLECTION_NAME,
+                persist_directory=str(PERSIST_DIR),
+                embedding_function=clip_embedder
+            )
+            # Verify it has data
+            count = vs._collection.count()
+            if count > 0:
+                log_progress(f"✅ Loaded existing vectorstore with {count} items")
+                return vs
+        except Exception as e:
+            log_progress(f"⚠️ Existing vectorstore corrupted, rebuilding: {e}")
+    
+    # Build new vectorstore
+    log_progress("🔧 Building vectorstore from scratch (2-3 minutes)...")
+    vs = Chroma(
+        collection_name=COLLECTION_NAME,
+        persist_directory=str(PERSIST_DIR),
+        embedding_function=clip_embedder
+    )
+    
+    # Extract and index images from PDF
+    log_progress("🖼️ Extracting images from PDF...")
+    try:
+        # Note: ingest_pdf_images is defined later in this file
+        added_ids = ingest_pdf_images(
+            pdf_path=PDF,
+            image_output_dir=IMG_DIR,
+            min_dim=96,
+            min_area=12_000
+        )
+        log_progress(f"✅ Indexed {len(added_ids)} images")
+    except Exception as e:
+        log_progress(f"❌ Error during image ingestion: {e}")
+        raise
+    
+    # Persist to disk
+    vs.persist()
+    log_progress("💾 Vectorstore ready!")
+    
+    return vs
+
+# Wrap initialization with Streamlit caching
+try:
+    import streamlit as st
+    
+    @st.cache_resource(show_spinner=False)
+    def get_cached_vectorstore():
+        """Cached wrapper - builds once per Streamlit deployment"""
+        return initialize_vectorstore()
+    
+    vectorstore = get_cached_vectorstore()
+except ImportError:
+    # Not running in Streamlit - initialize directly
+    vectorstore = initialize_vectorstore()
 
 # -------------------------------------------
 # RETRIEVERS + DEMOS
