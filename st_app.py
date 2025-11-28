@@ -19,8 +19,8 @@ try:
         rag_chain,
         PROJECT_ROOT,
         IMG_DIR,
-        COLLECTION_NAME,
-        vectorstore
+        COLLECTION_NAME
+       
     )
 except ImportError:
     st.error("""
@@ -360,11 +360,14 @@ def render_sidebar():
             st.write(f"**Image Directory:** `{IMG_DIR}`")
             
             # Try to get collection stats
+# Try to get collection stats
             try:
+                from LuckyRAG import vectorstore  # Import locally where needed
                 collection_count = vectorstore._collection.count()
                 st.write(f"**Documents in DB:** {collection_count}")
             except Exception as e:
-                st.write(f"**Documents in DB:** Unable to retrieve")
+                # Collection stats
+                st.write(f"**Documents in DB:** Check debug mode for details")
         
         st.divider()
         
