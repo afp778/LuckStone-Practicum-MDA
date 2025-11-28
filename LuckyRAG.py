@@ -164,6 +164,7 @@ def strings_to_documents(
 def add_texts_to_chroma(
     texts: List[str],
     source_id: str,
+    vectorstore,
     extra_meta: Optional[Dict] = None,
     chunk_size: int = 800,
     chunk_overlap: int = 120,
@@ -181,11 +182,13 @@ def add_texts_to_chroma(
         content = normalize_ws(d.page_content)
         meta = dict(d.metadata)
         meta.update({"chunk_index": idx, "modality": "text"})
+        if extra_meta:
+            meta.update(extra_meta)
         docs.append(Document(page_content=content, metadata=meta))
 
     # Add to Chroma using the CLIP embedder (text path of OpenCLIP)
     ids = vectorstore.add_documents(docs)
-    vectorstore.persist()  # flush to disk
+    # vectorstore.persist()  # flush to disk
     return ids
 
 # -------------------------------------------
@@ -349,6 +352,22 @@ def log_progress(message: str):
     except:
         pass
 
+def extract_text_from_pdf(pdf_path: Path) -> List[str]:
+    """Extract text content from PDF pages"""
+    texts = []
+    print(f"📄 Opening PDF: {pdf_path}")
+    
+    with fitz.open(str(pdf_path)) as doc:
+        print(f"📄 PDF has {len(doc)} pages")
+        for page_num, page in enumerate(doc, start=1):
+            text = page.get_text()
+            if text.strip():  # Only add non-empty pages
+                texts.append(text)
+                print(f"📄 Page {page_num}: {len(text)} characters")
+    
+    print(f"✅ Extracted text from {len(texts)} pages")
+    return texts
+
 def initialize_vectorstore():
     """
     Initialize or load vectorstore.
@@ -373,11 +392,30 @@ def initialize_vectorstore():
     # IN-MEMORY VECTORSTORE - no persist_directory parameter
     vs = Chroma(
         collection_name=COLLECTION_NAME,
-        # persist_directory=str(PERSIST_DIR),  # ❌ Remove this line
         embedding_function=clip_embedder
     )
     
-    # Extract and index images from PDF
+    # 1. EXTRACT AND INDEX TEXT FROM PDF (NEW!)
+    log_progress("📄 Extracting text from PDF...")
+    try:
+        pdf_texts = extract_text_from_pdf(PDF)
+        
+        if pdf_texts:
+            # Add text chunks to vectorstore
+            text_ids = add_texts_to_chroma(
+                texts=pdf_texts,
+                source_id=PDF.name,
+                vectorstore=vs,  # ✅ Pass vectorstore
+                chunk_size=800,
+                chunk_overlap=120
+            )
+            log_progress(f"✅ Indexed {len(text_ids)} text chunks")
+    except Exception as e:
+        log_progress(f"⚠️ Text extraction failed: {e}")
+        import traceback
+        log_progress(f"Traceback: {traceback.format_exc()}")
+    
+    # 2. EXTRACT AND INDEX IMAGES FROM PDF
     log_progress("🖼️ Extracting images from PDF...")
     try:
         added_ids = ingest_pdf_images(
@@ -388,21 +426,19 @@ def initialize_vectorstore():
             min_area=12_000
         )
         log_progress(f"✅ Indexed {len(added_ids)} images")
-        
-        # DEBUG: Verify data was added
-        final_count = vs._collection.count()
-        log_progress(f"✅ Final vectorstore count: {final_count} items")
-        
-        if final_count == 0:
-            log_progress("⚠️ WARNING: Vectorstore is empty after indexing!")
-        
     except Exception as e:
         log_progress(f"❌ Error during image ingestion: {e}")
         import traceback
         log_progress(f"Traceback: {traceback.format_exc()}")
         raise
     
-    # No need to persist since it's in-memory
+    # DEBUG: Verify final count
+    final_count = vs._collection.count()
+    log_progress(f"✅ Final vectorstore count: {final_count} items")
+    
+    if final_count == 0:
+        log_progress("⚠️ WARNING: Vectorstore is empty after indexing!")
+    
     log_progress("💾 In-memory vectorstore ready!")
     
     return vs
